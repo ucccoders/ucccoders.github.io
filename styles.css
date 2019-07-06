@@ -1,0 +1,55 @@
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    
+
+  }
+
+/* **********************  Topbar *****************************************************************/
+
+
+.topbar{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+}
+
+.topbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FFF;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-right: 100px;
+}
+
+
+.topbar li {
+  float: right;
+  padding: 0;
+
+}
+
+.topbar li a {
+  display: block;
+  color: black;
+  text-align: center;
+  font-size: 14pt;
+  padding: 13px 16px;
+  vertical-align: center;
+  text-decoration: none;
+
+  margin-left: 10px;
+}
+
+
+
+.topbar li a:hover:not(.active) {
+  background-color: #DDD;
+}
