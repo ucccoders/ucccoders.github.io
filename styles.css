@@ -5,52 +5,16 @@ body {
 
   }
 
-/* **********************  Topbar *****************************************************************/
-
-
-
-.topbar{
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-
+.content{
+  margin-top: 55px;
 }
 
-.topbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #FFF;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding-right: 100px;
+.col{
+  margin-top: 30px
 }
 
-
-.topbar li {
-  float: right;
-  padding: 0;
-
+.jumbotron{
+  padding-left: 5%;
+  padding-right: 5%
 }
 
-.topbar li a {
-  display: block;
-  color: black;
-  text-align: center;
-  font-size: 14pt;
-  padding: 13px 16px;
-  vertical-align: center;
-  text-decoration: none;
-
-  margin-left: 10px;
-}
-
-
-
-.topbar li a:hover:not(.active) {
-  background-color: #DDD;
-}
