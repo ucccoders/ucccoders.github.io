@@ -1,23 +1,32 @@
 body {
-    font-family: Roboto, Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    
+    font-size: 0.9rem;
+    -webkit-text-size-adjust: unset;
     
 
   }
+
+
 
 .content{
   margin-top: 55px;
   
 }
 
+.block{
+  background-color: #DDD;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  margin-bottom: 22px;
+}
+
 .col{
   margin-top: 30px
 }
 
-.jumbotron{
-  padding-left: 5%;
-  padding-right: 5%
-}
+
 
 .nav-item{
   margin-right: 10px;
@@ -52,4 +61,33 @@ body {
   background-color: white;
   display: none;
   overflow: hidden;
+}
+
+.card{
+  height: 100%;
+}
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/ 
+
+
+
+@media (min-width: 544px) {  
+  body {font-size: 0.91rem;}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  
+  body {font-size: 0.96rem;}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  body {font-size: 1rem;}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+  body {font-size: 1rem;}
 }
