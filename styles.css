@@ -74,20 +74,72 @@ M E D I A  Q U E R I E S
 
 
 
-@media (min-width: 544px) {  
-  body {font-size: 0.91rem;}
+@media (min-width: 1px) {  
+  html {font-size: 0.4rem;}
+  
+
 }
+
+@media (min-width: 200px) {  
+  html {font-size: 0.5rem;}
+  
+
+}
+
+@media (min-width: 510px) {  
+  html {font-size: 0.63rem;}
+  
+
+}
+
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {  
-  body {font-size: 0.96rem;}
+  html {font-size: 0.75rem;}
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-  body {font-size: 1rem;}
+  html {font-size: 0.875rem;}
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {  
-  body {font-size: 1rem;}
+  html {font-size: 1rem;}
 }
+
+
+/********************************************************/
+@media (min-width: 1px) {  
+  body {font-size: 1.8rem!important;}
+  
+
+}
+
+
+@media (min-width: 200px) {  
+  body {font-size: 1.8rem!important;}
+  
+
+}
+
+@media (min-width: 510px) {  
+  body {font-size: 1.56rem!important;}
+  
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  
+  body {font-size: 1.234rem!important;}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  body {font-size: 1.101rem!important;}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+  body {font-size: 1rem!important;}
+} 
