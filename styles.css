@@ -163,15 +163,20 @@ body {font-size: 1rem!important;}
 }
 .line1{
   border:0;
+ 
   margin:0;
   width:100%;
   height:2px;
   background:black;
-  margin-top: 1.2%;
-  margin-bottom: 1.2%
+  margin-top: 1.36%;
+  margin-bottom: 1.36%
 }
 
 .line1-light{
   height: 1px;
   background:#888;
+}
+
+ .media {
+  font-size: 1.3rem;
 }
