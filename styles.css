@@ -1,70 +1,76 @@
 body {
     
-    font-size: 0.9rem;
-    -webkit-text-size-adjust: unset;
-    
+  font-size: 0.9rem;
+  -webkit-text-size-adjust: unset;
+  margin: 0;
+  padding: 0;
 
-  }
+ 
+  
+
+}
 
 
 
 .content{
-  margin-top: 55px;
-  
+margin-top: 55px;
+
 }
 
 .block{
-  background-color: #DDD;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 36px;
-  padding-bottom: 36px;
-  margin-bottom: 22px;
+background-color: #FFF;
+padding-left: 7%;
+padding-right: 7%;
+padding-top: 36px;
+padding-bottom: 36px;
+margin-bottom: 22px;
 }
 
 .col{
-  margin-top: 30px
+margin-top: 30px
 }
 
 
 
 .nav-item{
-  margin-right: 10px;
+margin-right: 10px;
 }
 
 
-.accordion {
-  background-color: #ccc;
-  color: #444;
-  cursor: pointer;
-  padding-top: 18px;
-  padding-left: 18px;
-  padding-right: 18px;
-  padding-bottom: 12px;
-  
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
-}
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active1, .accordion:hover {
-  background-color: #ccc;
-}
-
-/* Style the accordion panel. Note: hidden by default */
-.panel {
-  padding: 0 18px;
-  padding-top: 12px;
-  background-color: white;
-  display: none;
-  overflow: hidden;
-}
 
 .card{
-  height: 100%;
+height: 100%;
+}
+
+.margins{
+  padding-left: 3%; padding-right: 3%
+}
+
+
+
+.innermargin{
+  padding-left: 4%; padding-right: 4%
+}
+
+.nomargin{
+  margin: 0;
+}
+
+.blacksec{
+  
+  padding-top: 3%;
+  padding-bottom: 3%;
+  background-color: #DDD;
+  color: black;
+  margin: 0;
+}
+
+.whitesec{
+  
+  padding-top: 3%;
+  padding-bottom: 3%;
+
+  margin: 0;
 }
 /*
 ####################################################
@@ -75,71 +81,97 @@ M E D I A  Q U E R I E S
 
 
 @media (min-width: 1px) {  
-  html {font-size: 0.4rem;}
-  
+html {font-size: 0.4rem;}
+
 
 }
 
 @media (min-width: 200px) {  
-  html {font-size: 0.5rem;}
-  
+html {font-size: 0.5rem;}
+
 
 }
 
 @media (min-width: 510px) {  
-  html {font-size: 0.63rem;}
-  
+html {font-size: 0.63rem;}
+
 
 }
 
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {  
-  html {font-size: 0.75rem;}
+html {font-size: 0.75rem;}
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-  html {font-size: 0.875rem;}
+html {font-size: 0.875rem;}
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {  
-  html {font-size: 1rem;}
+html {font-size: 1rem;}
 }
 
 
 /********************************************************/
 @media (min-width: 1px) {  
-  body {font-size: 1.8rem!important;}
-  
+body {font-size: 1.8rem!important;}
+
 
 }
 
 
 @media (min-width: 200px) {  
-  body {font-size: 1.8rem!important;}
-  
+body {font-size: 1.8rem!important;}
+
 
 }
 
 @media (min-width: 510px) {  
-  body {font-size: 1.56rem!important;}
-  
+body {font-size: 1.56rem!important;}
+
 
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {  
-  body {font-size: 1.234rem!important;}
+body {font-size: 1.234rem!important;}
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-  body {font-size: 1.101rem!important;}
+body {font-size: 1.101rem!important;}
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {  
-  body {font-size: 1rem!important;}
+body {font-size: 1rem!important;}
 } 
+
+.carousel-caption{
+  padding-bottom: 12%
+}
+
+.bigg{
+  font-size: 5.5rem;
+}
+
+.fade1{
+  filter: brightness(76%)
+}
+.line1{
+  border:0;
+  margin:0;
+  width:100%;
+  height:2px;
+  background:black;
+  margin-top: 1.2%;
+  margin-bottom: 1.2%
+}
+
+.line1-light{
+  height: 1px;
+  background:#888;
+}
