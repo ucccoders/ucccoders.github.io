@@ -7,6 +7,8 @@ body {
 
 }
 
+
+
 /*
 ####################################################
 FONT SIZES MASTER CONTROL!!!!!!!
@@ -70,7 +72,8 @@ html h3 {font-size: 2.1rem!important;}
 @media (min-width: 992px) { 
 html {font-size: 0.875rem;}
 html p {font-size: 1.101rem!important;}
-html h5, html h5 .lead, .media {font-size: 1.26rem!important;}
+html h5, html h5 .lead {font-size: 1.26rem!important;}
+.media {font-size: 1.2rem!important;}
 html h4, html h4 .card-title {font-size: 1.66rem!important;}
 html h3 {font-size: 2.0rem!important;}
 
@@ -80,11 +83,12 @@ html h3 {font-size: 2.0rem!important;}
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {  
-html {font-size: 1rem;}
+html {font-size: 0.95rem;}
 html p {font-size: 1.1rem!important;}
 html h5, html h5 .lead, .media {font-size: 1.26rem!important;}
 html h4, html h4 .card-title {font-size: 1.542069rem!important;}
 html h3 {font-size: 1.869rem!important;}
+html h1 {font-size: 2.4rem!important;}
 
 
 
@@ -204,7 +208,7 @@ height: 100%;
   margin:0;
   width:100%;
   height:2.101010101px;
-  background:#972900;
+  background:#B10D23;
   margin-top: 1.6%;
   margin-bottom: 1.6%
 }
@@ -231,3 +235,36 @@ height: 100%;
   text-align: center;
   margin-top: 5%
 }
+
+
+
+.navbar-brand{
+  color: #FFF!important
+}
+
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.15rem;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.navbar-dark .navbar-nav .nav-link.disabled {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+
+.navbar-dark .navbar-toggler {
+  color: rgba(255, 255, 255,0.85);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+.navbar-dark .navbar-text {
+  color: rgba(255, 255, 255, 1)!important;
+}
+
