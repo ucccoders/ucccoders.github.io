@@ -172,7 +172,7 @@ height: 100%;
 }
 @media (min-width: 250px){
   .carousel-caption {margin-bottom: 0%; padding-bottom: 5%;}
-  .smalll {font-size: 0% !important}
+  .smalll {font-size: 150% !important}
   .bigg {font-size: 300% !important}
 }
 
