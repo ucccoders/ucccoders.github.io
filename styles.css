@@ -249,6 +249,33 @@ height: 100%;
   font-size: 1.15rem;
 }
 
+@media (min-width: 1px){
+  .navbar-dark .navbar-nav .nav-link {font-size: 1.7rem !important}
+  .navbar-dark .navbar-brand {font-size: 1.8rem!important}
+}
+@media (min-width: 250px){
+  .navbar-dark .navbar-nav .nav-link {font-size: 1.5rem!important}
+  .navbar-dark .navbar-brand {font-size: 1.6rem!important}
+
+}
+
+@media (min-width: 400px){
+  .navbar-dark .navbar-nav .nav-link {font-size: 1.3rem!important}
+  .navbar-dark .navbar-brand {font-size: 1.5rem!important}
+
+
+}
+@media (min-width: 576px){
+  .navbar-dark .navbar-nav .nav-link {font-size: 1.15rem!important}
+  .navbar-dark .navbar-brand {font-size: 1.5rem!important}
+
+}
+@media (min-width: 729px){
+  .navbar-dark .navbar-nav .nav-link {font-size: 1.15rem!important}
+  .navbar-dark .navbar-brand {font-size: 1.3rem!important}
+
+}
+
 .navbar-dark .navbar-nav .nav-link:hover {
   color: rgba(255, 225, 225, 0.9);
 }
@@ -265,7 +292,7 @@ height: 100%;
 
 
 
-.navbar-dark .navbar-text {
+.navbar-dark .navbar-brand {
   color: rgba(255, 255, 255, 1)!important;
 }
 
