@@ -297,7 +297,7 @@ height: 100%;
 }
 
 .footer{
-  background-color: #333;
+  background-color: #353535;
   margin-bottom: 0px;
   height: 100%;
   padding-left: 6%;
@@ -315,7 +315,7 @@ height: 100%;
 }
 
 @media (min-width: 576px){
-  .avatar-img{max-width: 200px!important}
+  .avatar-img{max-width: 210px!important}
 }
 @media (min-width: 400px){
   .avatar-img{max-width: 180px!important}
