@@ -6,79 +6,100 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	
 </head>
 <body>
 
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#events">Events</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#sections">Sections</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Projects
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="index.html#projects">Overview</a>
-                        <a class="dropdown-item" href="#">Example Project</a>
-                        
-                    </div>
-                    </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#team">Our Team</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Resources
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="ai.html">AI/Machine Learning Section</a>
-                    <a class="dropdown-item" href="algorithms.html">Algorithms Section</a>
-                    <a class="dropdown-item" href="gamedev.html">Game Development Section</a>
-                    <a class="dropdown-item" href="webdev.html">Web Development Section</a>
-                    </div>
-                </li>
-                </ul>
-            </div>
-        </nav>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark " style = "background-color: #B10D23;">
+		<a class="navbar-brand">UCC  Coders</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>  
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		  <ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+			  <a class="nav-link" href="index.html#">Home </a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="index.html#events">Upcoming Events</a>
+			</li>
 
-	<div class = "content">
+			<li class="nav-item">
+					<a class="nav-link" href="index.html#meetings">Meeting Format</a>
+			 </li>
 
-        <div class="jumbotron">
-            <h1 class="display-4">The Algorithms Section: What Do We Do?</h1>
+			<li class="nav-item">
+				<a class="nav-link" href="index.html#annuals">Annual Events</a>
+			</li>
+		
+			<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Sections
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="index.html#sections">Overview</a>
+					  <a class="dropdown-item" href="ai.html">AI/Machine Learning Section</a>
+					  <a class="dropdown-item" href="algorithms.html">Algorithms Section</a>
+					  <a class="dropdown-item" href="gamedev.html">Game Development Section</a>
+					  <a class="dropdown-item" href="webdev.html">Web Development Section</a>
+					</div>
+				  </li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				  Projects
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+				  <a class="dropdown-item" href="index.html#projects">Overview</a>
+				  <a class="dropdown-item" href="#">Example Project</a>
+				  
+				</div>
+			  </li>
+			<li class="nav-item">
+				<a class="nav-link" href="index.html#team">Our Team</a>
+			</li>
+			
+		  </ul>
+		  
+		</div>
+	</nav>
+
+	<div class = "content" style = "padding-top: 27px;">
+
+        <div class="block">
+            <h1 >Algorithmic Study Section</h1>
             
             <hr class="my-4">
-            <p class="lead">
+            <p class="lead media">
                 The Algorithms Section at the UCC Coding and Algorithms Academy, led by student Kevin Liu, meets once every two weeks to discuss an algorithms-related concept, with an aim to spark interest in computer algorithms as well as their applications in the real-world or in contest problems. 
             </p>
             <hr class = "my-4">
-            <div class="media">
-                <img class="align-self-center mr-3" src="Media/profile1.png" alt="Generic placeholder image" width="230px"height="230px">
-                <div class="media-body">
-                    
+
+            <div class = "row">
+                <div class = "col col-4 col-sm-3 col-md-2">
+                    <img class="align-self-center mr-3" src="Media/profile1.png" alt="Generic placeholder image" style = "width: 100%">
+
+                </div>
+                <div class = "col col-8 col-sm-9 col-md-10">
                     <h4> Kevin Liu</h4>
                     <h5 class="mt-0">Algorithms Section Head</h5>
                     <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
                     <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+              
                 </div>
             </div>
+
+
+
+           
         </div>
-        <div class="jumbotron">
-            <h1 class="display-4">Discussions</h1>
+        
+        <div class="block pt-5 pb-5">
+                <hr class = "line1">
+            <h1 class=>Discussions</h1>
             <hr class = "my-4">
             <h2> Upcoming Discussions</h2>
             <h5> All upcoming discussions take place at 4:00pm on the indicated date.</h5>
@@ -97,6 +118,8 @@
             <h2> Previous Discussions and Resources</h2>
             <hr class="my-4">
 
+            <p> A recap and material from previous discussions will be put here.</p>
+            <!--
             <h4> Fibonnaci Sequences</h4>
             <h5 class="lead">Sept. 15, 2019</h5>
             <p>We will discuss...</p>
@@ -106,9 +129,14 @@
             <h5 class="lead">Sept. 08, 2019</h5>
             <p>We will discuss...</p>
             <hr class = "my-4">
+            -->
             
         </div>
-    </div>  
+    </div>
+    
+    <div class = "footer">
+        <p style = "font-size: 1.1rem!important;">Designed and Coded by Kevin Yunqiao Liu - &#9400; 2019</p> 
+    </div>
 
 	  
 

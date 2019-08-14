@@ -60,7 +60,7 @@ html h3 {font-size: 2.2rem!important;}
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {  
 html {font-size: 0.75rem;}
-html p, .media, h6 {font-size: 1.00rem!important;}
+html p, .media, h6 {font-size: 1.30rem!important;}
 html h5, html h5 .lead {font-size: 1.3rem!important;}
 html h4, html h4 .card-title {font-size: 1.8rem!important;}
 html h3 {font-size: 2.1rem!important;}
@@ -76,7 +76,7 @@ html p, h6 {font-size: 1.101rem!important;}
 html h5, html h5 .lead {font-size: 1.26rem!important;}
 .media {font-size: 1.133rem!important;}
 html h4, html h4 .card-title {font-size: 1.66rem!important;}
-html h3 {font-size: 2.0rem!important;}
+html h3 {font-size: 2rem!important;}
 
 
 
@@ -89,7 +89,7 @@ html p, h6 {font-size: 1.1rem!important;}
 html h5, html h5 .lead, .media {font-size: 1.26rem!important;}
 html h4, html h4 .card-title {font-size: 1.542069rem!important;}
 html h3 {font-size: 1.869rem!important;}
-html h1 {font-size: 2.4rem!important;}
+html h1 {font-size: 2.8rem!important;}
 
 
 
