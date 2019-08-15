@@ -7,6 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -74,7 +75,7 @@
             
             <hr class="my-4">
             <p class="lead media">
-                The Algorithms Section at the UCC Coding and Algorithms Academy, led by student Kevin Liu, meets once every two weeks to discuss an algorithms-related concept, with an aim to spark interest in computer algorithms as well as their applications in the real-world or in contest problems. 
+                The Algorithms Section at the UCC Coding and Algorithms Academy meets once every two weeks to discuss an algorithms-related concept, with an aim to spark interest in computer algorithms as well as their applications in the real-world or in contest problems. 
             </p>
             <hr class = "my-4">
 
@@ -86,8 +87,8 @@
                 <div class = "col col-8 col-sm-9 col-md-10 d-none d-lg-block">
                     <h4> Kevin Liu</h4>
                     <h5 class="mt-0">Algorithms Section Head</h5>
-                    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                    <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    <p>Welcome to the Algorithmic Study section. I am Kevin Liu, a Grade 10 student in Jackson's House.</p>
+                    <p class="mb-0">During each section discussion, I will first give a short lecture on a well-defined algorithmic topic. Then I will leave a relevant "problem of the week" for members to work over the next couple of weeks. At the next discussion, I will allow members to share their solutions for the problem before moving onto the next topic. After each topic, I will post summarizing notes of it, as well as the solution of the "Problem of the Week" on this page.  </p>
               
                 </div>
             </div>
@@ -96,9 +97,8 @@
 
             <h4> Kevin Liu    <img class="align-self-center mr-3 px-2" src="Media/kl.jpg" alt="Generic placeholder image" style = "width: 24%; float: right;"></h4>
             <h5 class="mt-0">Algorithms Section Head</h5>
-            <p>   
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-            <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            <p>   Welcome to the Algorithmic Study section. I am Kevin Liu, a Grade 10 student in Jackson's House.</p>
+            <p class="mb-0">During each section discussion, I will first give a short lecture on a well-defined algorithmic topic. Then I will leave a relevant "problem of the week" for members to work over the next couple of weeks. At the next discussion, I will allow members to share their solutions for the problem before moving onto the next topic. After each topic, I will post summarizing notes of it, as well as the solution of the "Problem of the Week" on this page.</p>
 
 
         </div>
@@ -111,19 +111,25 @@
             <h1 class=>Discussions</h1>
             <hr class = "my-4">
             <h2> Upcoming Discussions</h2>
-            <h5> All upcoming discussions take place at 4:00pm on the indicated date.</h5>
+            <h5> All upcoming discussions take place at 3:45pm on the indicated date.</h5>
             <hr class="my-4">
 
-            <h4> Fibonnaci Sequences</h4>
-            <h5 class="lead">Sept. 15, 2019</h5>
-            <p>We will discuss...</p>
+            <h4> Intro to Recursion - Fibonacci Sequences</h4>
+            <h5 class="lead">Sept. 26, 2019</h5>
+            <p>The Fibonacci Sequence is the famous sequence 1, 1, 2, 3, 5, 8, 13..., where the first two terms are 1 and each term after that is the sum of the two terms prior to it. Today we will look at different methods of generating the fibonacci sequence and similar sequences. </p>
+            <p>Generating the fibonacci sequence is relatively straightforward if we just start from 1, 1 and work our way up step by step, by the definition of the sequence. However, it is also possible to recursively generate the sequence by defining a function and calling it recursively (see the pseudocode below that finds the k'th fibonacci number.)  </p>
+            <p class = "code">def fibonacci(n): </p>
+            <p class = "code pl-3">if n == 1 or n == 2: </p>
+            <p class = "code pl-5">return 1 </p>
+            <p class = "code pl-3">else: </p>
+            <p class = "code pl-5">return fibonacci(n-1) + fibonacci(n-2) </p>
+            <p class = "code">fibonacci(k) </p>
+            <p class = "pt-3">In this way, the desired fibonacci number is generated by searching directly for the two numbers before it. But as we don't yet have the two numbers before it (if n > 4), to find each of those two numbers before it, we keep going backwards in the sequence until we reach the exit condition, which is when n = 1 or 2. When we get to that point, we will have found the third fibonacci number, meaning we have found the fourth, fifth, and so on, all the way to n. </p>
+            <p>The steps that this recursive algorithm takes can be best viewed as a tree, which will be discussed in the meeting on Thursday, September 26. We will also look at a nice way to speed up this recursion algorithm.  </p>
+            <h5> Question of the Week: Fibonacci Sequences</h5>
+            <p> The Tribonacci Sequence is the sequence 1, 1, 1, 3, 5, 9. The first three terms are defined to be 1, 1, 1 and every term after that is the sum of the three terms before it. Code a program that can find the n'th term in the tribonacci sequence. Try to complete this program using recursion! </p>
             <hr class = "my-4">
             
-            <h4> Pattern Generation</h4>
-            <h5 class="lead">Sept. 08, 2019</h5>
-            <p>We will discuss...</p>
-            <hr class = "my-4">
-
             <h2> Previous Discussions and Resources</h2>
             <hr class="my-4">
 

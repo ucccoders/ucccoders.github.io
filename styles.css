@@ -117,6 +117,12 @@ padding-bottom: 0.6%;
 
 }
 
+.code{
+  font-family: 'Inconsolata', monospace;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .col{
 margin-top: 1.3%
 }
