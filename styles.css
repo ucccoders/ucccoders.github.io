@@ -256,28 +256,28 @@ height: 100%;
 }
 
 @media (min-width: 1px){
-  .navbar-dark .navbar-nav .nav-link {font-size: 1.7rem !important}
+  .navbar-dark .navbar-nav .nav-link, .dropdown-item {font-size: 1.7rem !important}
   .navbar-dark .navbar-brand {font-size: 1.8rem!important}
 }
-@media (min-width: 250px){
-  .navbar-dark .navbar-nav .nav-link {font-size: 1.5rem!important}
-  .navbar-dark .navbar-brand {font-size: 1.6rem!important}
+@media (min-width: 200px){
+  .navbar-dark .navbar-nav .nav-link, .dropdown-item {font-size: 1.8rem!important}
+  .navbar-dark .navbar-brand {font-size: 1.8rem!important}
 
 }
 
-@media (min-width: 400px){
-  .navbar-dark .navbar-nav .nav-link {font-size: 1.3rem!important}
-  .navbar-dark .navbar-brand {font-size: 1.5rem!important}
+@media (min-width: 510px){
+  .navbar-dark .navbar-nav .nav-link, .dropdown-item {font-size: 1.5rem!important}
+  .navbar-dark .navbar-brand {font-size: 1.6rem!important}
 
 
 }
 @media (min-width: 576px){
-  .navbar-dark .navbar-nav .nav-link {font-size: 1.15rem!important}
-  .navbar-dark .navbar-brand {font-size: 1.5rem!important}
+  .navbar-dark .navbar-nav .nav-link, .dropdown-item{font-size: 1.5rem!important}
+  .navbar-dark .navbar-brand {font-size: 1.6rem!important}
 
 }
 @media (min-width: 729px){
-  .navbar-dark .navbar-nav .nav-link {font-size: 1.15rem!important}
+  .navbar-dark .navbar-nav .nav-link, .dropdown-item {font-size: 1.15rem!important}
   .navbar-dark .navbar-brand {font-size: 1.3rem!important}
 
 }
