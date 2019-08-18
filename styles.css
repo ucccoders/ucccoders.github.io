@@ -21,7 +21,7 @@ FONT SIZES MASTER CONTROL!!!!!!!
 
 @media (min-width: 1px) {  
 html {font-size: 0.4rem;}
-html p, .media, {font-size: 1.7rem!important;}
+html p, .media {font-size: 1.7rem!important;}
 h6 {font-size: 1.5rem!important;}
 html h5, html h5 .lead {font-size: 1.8rem!important;}
 .teamname {font-size: 1.7rem !important}
@@ -36,7 +36,7 @@ html h3 {font-size: 2.4rem!important;}
 
 @media (min-width: 200px) {  
 html {font-size: 0.5rem;}
-html p, .media,  {font-size: 1.65rem!important;}
+html p, .media  {font-size: 1.65rem!important;}
 h6 {font-size: 1.5rem!important;}
 html h5, html h5 .lead {font-size: 1.8rem!important;}
 html h4, html h4 .card-title {font-size: 2.0rem!important;}
