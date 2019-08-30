@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Game Development Section</title>
+	<title>Algorithms Section</title>
 
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	
 </head>
 <body>
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark " style = "background-color: #B10D23;">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark " style = "background-color: #B10D23;">
 		<a class="navbar-brand" href = >UCC  Coders</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="navbar-toggler-icon"></span>
@@ -39,9 +42,9 @@
 					  Sections
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item nav-disappear" href="index.html#sections">Overview</a>
-						<a class="dropdown-item nav-disappear" href="algorithms.html">Algorithms Section</a>
-						<a class="dropdown-item nav-disappear" href="ai.html">AI and Machine Learning Section</a>
+            <a class="dropdown-item nav-disappear" href="index.html#sections">Overview</a>
+            <a class="dropdown-item nav-disappear" href="algorithms.html">Algorithms Section</a>
+						<a class="dropdown-item nav-disappear" href="ai.html">AI/Machine Learning Section</a>
 						<a class="dropdown-item nav-disappear" href="gamedev.html">Game Development Section</a>
 						<a class="dropdown-item nav-disappear" href="webdev.html">Web Development Section</a>
 					</div>
@@ -65,16 +68,104 @@
 		</div>
 	</nav>
 
-	<div class = "content">
-    <p> Development in progress! Check back later!</p>
-    </div>  
+	<div class = "content" style = "padding-top: 27px;">
+
+        <div class="block">
+            <h1 >Game Development Section</h1>
+            
+            <hr class="my-4">
+            <p class="lead media">
+                The Game Development Section at the UCC Coding and Algorithms Academy meets once every two weeks to discuss game concepts, aiming to develop a toolkit that club members can draw from in their own future endeavors in game creation.
+            </p>
+            <hr class = "my-4">
+
+            <div class = "row">
+                <div class = "col col-4 col-sm-3 col-md-2 d-none d-lg-block">
+                    <img class="align-self-center mr-3" src="Media/wt-game.png" alt="Generic placeholder image" style = "width: 100%">
+
+                </div>
+                <div class = "col col-8 col-sm-9 col-md-10 d-none d-lg-block">
+                    <h4> William Trojniak</h4>
+                    <h5 class="mt-0">Game Development Section Head</h5>
+                    <p>Welcome to the Game Development section. I am William Trojniak, a Grade 10 student in Bremner's House.</p>
+                    <p class="mb-0">During each section discussion, I will be demonstrating a certain aspect of a game that I'm developing and how I'm achieving such functionality. Members will then be encouraged to implement their own take on such an element into their own game. In the next discussion, members will then have the opportunity to show off how they implemented that functionality into their own game, highlighting how their take differed from the implementation demonstrated.</p>
+              
+                </div>
+            </div>
+
+            <div class = "d-block d-lg-none">
+
+            <h4> William Trojniak    <img class="align-self-center mr-3 pt-2 px-2" src="Media/wt-game.png" alt="Generic placeholder image" style = "width: 24%; float: right;"></h4>
+            <h5 class="mt-0">Game Development Section Head</h5>
+            <p>Welcome to the Game Development section. I am William Trojniak, a Grade 10 student in Bremner's House.</p>
+            <p class="mb-0">During each section discussion, I will be demonstrating a certain aspect of a game that I'm developing and how I'm achieving such functionality. Members will then be encouraged to implement their own take on such an element into their own game. In the next discussion, members will then have the opportunity to show off how they implemented that functionality into their own game, highlighting how their take differed from the implementation demonstrated.</p>
+
+
+        </div>
+
+           
+        </div>
+        
+        <div class="block pt-5 pb-5">
+                <hr class = "line1">
+            <h1 class=>Discussions</h1>
+            <hr class = "my-4">
+            <h2> Upcoming Discussions</h2>
+            <h5> All upcoming discussions take place at 3:45pm on the indicated date.</h5>
+            <hr class="my-4">
+
+            <h4> Setting Up Our Playspace - HTML Canvas</h4>
+            <h5 class="lead">Sept. 26, 2019</h5>
+            <p>The first game that we create will be Snake, coded in JavaScript and utilising an HTML canvas. </p>
+            <p>Through of Snake's development, the basics of JavaScript will be learned, allowing for more ambitious projects in the future.</p>
+            <p>During this discussion, we will be creating our canvas and learning how JavaScript can be used to draw graphics on the canvas. This functionality will be used to draw a checkered background and our snake.</p>
+
+            <p class = "code">&lthtml&gt</p>
+            <p class = "code">&ltcanvas id="myCanvas" width="480" height="480" style="border:1px solid #000000;"&gt&lt/canvas&gt</p>
+            <p class = "code">&lt/html&gt</p>
+
+            <p class = "code">&ltscript&gt</p>
+            <p class = "code">const canvas = document.getElementById("myCanvas");</p>
+            <p class = "code">const ctx = canvas.getContext("2d");</p>
+            <p class = "code">ctx.fillStyle = "#00FF00";</p>
+            <p class = "code">for(var c = 0; c &lt 15; c++){</p>
+            <p class = "code pl-3">for(var r = 0; r &lt 15; r++){</p>
+            <p class = "code pl-5">ctx.fillRect(c*32, r*32, 32, 32);</p>
+            <p class = "code pl-3">}</p>
+            <p class = "code pl">}</p>
+            <p class = "code">&lt/script&gt</p>
+            
+            
+            <hr class = "my-4">
+            <h2> Previous Discussions and Resources</h2>
+            <hr class="my-4">
+
+            <p> A recap and material from previous discussions will be put here.</p>
+            <!--
+            <h4> Fibonnaci Sequences</h4>
+            <h5 class="lead">Sept. 15, 2019</h5>
+            <p>We will discuss...</p>
+            <hr class = "my-4">
+            
+            <h4> Pattern Generation</h4>
+            <h5 class="lead">Sept. 08, 2019</h5>
+            <p>We will discuss...</p>
+            <hr class = "my-4">
+            -->
+            
+        </div>
+    </div>
+    
+    <div class = "footer">
+        <p style = "font-size: 1.1rem!important;">Designed and Coded by Kevin Y. Liu - &#9400; 2019</p> 
+    </div>
 
 	  
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="javascript.js"></script>
+  <script src="javascript.js"></script>
 
 </body>
 </html>
