@@ -254,6 +254,7 @@ height: 100%;
 
 
 
+
 .navbar-brand{
   color: #FFF!important
 }
@@ -301,7 +302,7 @@ height: 100%;
 
 
 .navbar-dark .navbar-toggler {
-  color: rgba(255, 255, 255,0.85);
+  color: rgba(255, 255, 255,0.1);
   border-color: rgba(255, 255, 255, 0.1);
 }
 
