@@ -78,27 +78,28 @@
         </div>
         
         <div class="block pb-5">
-                <hr class = "line1">
+            <hr class = "line1">
             <h2 class = "pt-4"> Resources</h2>
             <hr>
+            <div>
+                <h4 class = "pb-3"> Registration Instructions</h4>
 
-            <h4 class = "pb-3"> Registration Instructions</h4>
+                <p> If you wish to write the CCC this year, please fill out this <a target="_blank"href = "https://docs.google.com/forms/d/1WvnOWGzzhL_vk8m7F9LNgQ6WmhuwuFKSt3g3ZYJKWN0/">Google Form</a> first. </p>
 
-            <p> If you wish to write the CCC this year, please fill out this <a target="_blank"href = "https://docs.google.com/forms/d/1WvnOWGzzhL_vk8m7F9LNgQ6WmhuwuFKSt3g3ZYJKWN0/">Google Form</a> first. </p>
-
-            <p> The <a target="_blank"href = "https://cccgrader.com/index.php"> CCC Online Grader</a> is used to participate in the actual competition and to work on past CCC problems for practice. The grader allows you to upload your code for automatic scoring. </p>
-            <p> If you have made an account in previous years, you should be good to go. If you have forgotten your login info, check your email as you may have received your username/password via email when you registered. If not, please contact Mr. Miskew at pmiskew@ucc.on.ca.  </p>
-            <p> If you don't have an account for the online grader yet, register <a target="_blank"href = "https://cccgrader.com/register.php">here</a> using your legal name. Please also contact kevin.liu@ucc.on.ca for the school number. After registering you will wait for Mr. Miskew's approval, which will grant you full access to the system. </p>
+                <p> The <a target="_blank"href = "https://cccgrader.com/index.php"> CCC Online Grader</a> is used to participate in the actual competition and to work on past CCC problems for practice. The grader allows you to upload your code for automatic scoring. </p>
+                <p> If you have made an account in previous years, you should be good to go. If you have forgotten your login info, check your email as you may have received your username/password via email when you registered. If not, please contact Mr. Miskew at pmiskew@ucc.on.ca.  </p>
+                <p> If you don't have an account for the online grader yet, register <a target="_blank"href = "https://cccgrader.com/register.php">here</a> using your legal name. Please also contact kevin.liu@ucc.on.ca for the school number. After registering you will wait for Mr. Miskew's approval, which will grant you full access to the system. </p>
+                
+                <hr>
             
-            <hr>
-            <h4 class = "pb-3"> Prep Resources</h4>
+                <h4 class = "pb-3"> Prep Resources</h4>
 
-            <p>For any new contest takers, you should familiarize yourself with the contest <a target = "_blank" href = "https://cemc.uwaterloo.ca/contests/computing/details.html">info</a> and <a target = "_blank" href = "https://cccgrader.com/rules.pdf">rules</a>, as well as <a href = "https://cemc.uwaterloo.ca/contests/computing/examples.html" target = "_blank">an example problem to learn inputs/outputs</a>. </p>
+                <p>For any new contest takers, you should familiarize yourself with the contest <a target = "_blank" href = "https://cemc.uwaterloo.ca/contests/computing/details.html">info</a> and <a target = "_blank" href = "https://cccgrader.com/rules.pdf">rules</a>, as well as <a href = "https://cemc.uwaterloo.ca/contests/computing/examples.html" target = "_blank">an example problem to learn inputs/outputs</a>. </p>
 
-            <p> Once logged in to the official CCC online grader, you will have access to some past contest questions on which your answers can be graded as per the official CCC rules.</p>
-            <p><a href = "https://dmoj.ca/problems/" target = "_blank">DMOJ</a> is a website with a large database of questions from coding contests including the CCC. It interestingly has more CCC problems available than on the official grader and answers/editorials to some problems (to find CCC problems, just search CCC in the problem search box). Please note that while DMOJ will also grade your answers once you make an account, the format is slightly different compared to the official CCC grader so make sure you're familiar with the official one before the contest. </p>
+                <p> Once logged in to the official CCC online grader, you will have access to some past contest questions on which your answers can be graded as per the official CCC rules.</p>
+                <p><a href = "https://dmoj.ca/problems/" target = "_blank">DMOJ</a> is a website with a large database of questions from coding contests including the CCC. It interestingly has more CCC problems available than on the official grader and answers/editorials to some problems (to find CCC problems, just search CCC in the problem search box). Please note that while DMOJ will also grade your answers once you make an account, the format is slightly different compared to the official CCC grader so make sure you're familiar with the official one before the contest. </p>
 
-            
+            </div>
 
             
             <hr><h2 class = "pb-2"> Weekly Problem</h2>
@@ -107,6 +108,179 @@
             <hr class="my-4">
 
             
+            <h4> Week 2 - Junior</h4>
+            <h5 class="lead">Jan 10, 2020</h5>
+            <br>
+            <p><a href = "javascript:void(0);" onclick="hideshow('week2jp')"> Problem</a></p>
+            <div class = "problem pb-4" id = "week2jp" >
+                
+                <p>Magic Squares are square arrays of numbers that have the interesting property that the numbers in each column, and in each row, all add up to the same total.</p>
+                <p>Given a 4×4 square of numbers, determine if it is magic square.</p>
+                <p><u>Input Specification</u></p>
+                <p> The input consists of four lines, each line having 4 space-separated integers.</p>
+                <p><u>Output Specification</u></p>
+                <p>Output either magic if the input is a magic square, or not magic if the input is not a magic square.</p>
+                <p><u>Sample Input</u></p>
+                <pre>
+16 3 2 13
+5 10 11 8
+9 6 7 12
+4 15 14 1</pre>
+                
+                <p><u>Sample Output</u></p>
+                <pre>magic</pre>
+                <p><u>Explanation for Sample Output</u></p>
+                <p>Notice that each row adds up to 34, and each column also adds up to 34.</p>
+
+                <hr>
+            </div>
+            <p><a href = "javascript:void(0);" onclick="hideshow('week2js')"> Solution</a></p>
+            <br>
+            <div class = "problem pb-4" id = "week2js">
+                <p> This problem was the second question from the 2016 Junior CCC competition. </p>
+                <p> A Java solution by Mr. Miskew is shown below.</p>
+                <pre>
+import java.util.Scanner;
+/*
+    * https://cemc.uwaterloo.ca/contests/computing/2016/stage%201/juniorEn.pdf
+*/
+
+public class CCCJ2MagicSquare {
+
+    public static void main(String[] args) {
+        
+        System.out.println(magicSquares());
+    }
+    
+    public static String magicSquares() {
+        
+        //int[][] arr = {{16, 3, 2, 13}, {5, 10, 11, 8}, {9, 6, 7, 12}, {4, 15, 14, 1}};
+        int[][] arr = {{5, 10, 1, 3}, {10, 4, 2, 3}, {1, 2, 8, 5}, {3, 3, 5, 0}};
+            
+        Scanner s = new Scanner(System.in);
+        
+        //for (int r = 0; r &lt; 4; r = r + 1) 
+        //	for (int c = 0; c &lt; 4; c = c + 1)
+        //		arr[r][c] = s.nextInt();
+        
+        int total = arr[0][0] + arr[0][1] + arr[0][2] + arr[0][3];
+        
+        //Check row sums
+        for (int r = 1; r &lt; 4; r = r + 1) {
+            
+            int t = 0;
+            for (int c = 0; c &lt; 4; c = c + 1)
+                t = t + arr[r][c];
+            
+            if (t != total)
+                return "not magic";
+        }
+        
+        //Check column sums
+        for (int c = 0; c &lt; 4; c = c + 1) {
+            
+            int t = 0;
+            for (int r = 0; r &lt; 4; r = r + 1)
+                t = t + arr[r][c];
+            if (t != total)
+                return "not magic";
+        }
+        
+        return "magic";
+    }
+}
+                    </pre>
+            </div>
+
+            <h4> Week 2 - Senior</h4>
+            <h5 class="lead">Jan 10, 2020</h5>
+            <br>
+            <p><a href = "javascript:void(0);"onclick="hideshow('week1sp')"> Problem</a></p>
+            <div class = "problem pb-4" id = "week1sp" >
+                
+                <p>In the country of Voronoi, there are N villages, located at distinct points on a straight road. Each of these villages will be represented by an integer position along this road.
+
+                    Each village defines its neighbourhood as all points along the road which are closer to it than to any other village. A point which is equally close to two distinct villages A and B is in the neighbourhood of A and also in the neighbourhood of B.
+                    
+                    Each neighbourhood has a size which is the difference between the minimum (leftmost) point in its neighbourhood and the maximum (rightmost) point in its neighbourhood.
+                    
+                    The neighbourhoods of the leftmost and rightmost villages are defined to be of infinite size, while all other neighbourhoods are finite in size.
+                    
+                    Determine the smallest size of any of the neighbourhoods (with exactly 1 digit after the decimal point).</p>
+                <p><u>Input Specification</u></p>
+                <p>The first line will contain the number N (3≤N≤100), the number of villages. On the next N lines there will be one integer per line, where the ith line contains the integer V<sub>i</sub> , the position of the i<sup>th</sup> village (−1000000000≤V<sub>i</sub>≤1000000000). All villages are at distinct positions.</p>
+                <p><u>Output Specification</u></p>
+                <p>Output the smallest neighbourhood size with exactly one digit after the decimal point.</p>
+                <p><u>Sample Input</u></p>
+                <p class = "code">5<br>16<br>0<br>10<br>4<br>15</p><br>
+                <p><u>Sample Output</u></p>
+                <p class = "code">3.0<br> </p><br>
+                <p><u>Explanation of Sample Output</u></p>
+                <p>The neighbourhoods around 0 and 16 are infinite. The neighbourhood around 4 is 5 units (2 to the left, and 3 to the right). The neighbourhood around 10 is 5.5 units (3 to the left and 2.5 to the right). The neighbourhood around 15 is 3.0 units (2.5 to the left and 0.5 to the right).</p>
+
+            </div>
+            <p><a href = "javascript:void(0);"onclick="hideshow('week1ss')"> Solution</a></p>
+            <br>
+            <div class = "problem pb-4" id = "week1ss">
+                <p> This problem was the first question from the 2014 Senior CCC competition. </p>
+                <p> A C++ solution by Kevin Liu is shown below.</p>
+                <pre>
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <cmath>
+#include <sstream>
+#include <algorithm>
+
+using namespace std;
+
+int k = 0;
+double counter = 0;
+int w = 0;
+double smallest = 2000000001;
+
+int main(int argc, const char * argv[]) {
+
+    int num;
+    cin &gt;&gt; num;
+    
+    cout &lt;&lt; fixed;
+    
+    double towns [num];
+    
+    for(int i=0; i &lt; num; i++){
+        cin &gt;&gt; k;
+        towns[i]=k;
+    }
+    
+    sort(towns, towns + num);
+    
+    for(int i = 1; i &lt; num-1; i++){
+        counter = 0;
+        counter += (towns[i-1]-towns[i])/-2;
+        counter += (towns[i]-towns[i+1])/-2;
+       
+        if (counter &lt; smallest){
+            smallest = counter;
+        }
+        
+    }
+    
+    if((smallest - floor(smallest)) &lt; 0.0000001) {
+        
+        int answer = 0;
+        answer += smallest;
+        cout  &lt;&lt; fixed &lt;&lt; answer;
+        cout &lt;&lt; ".0" &lt;&lt; endl;
+    }
+    else{
+        cout &lt;&lt; setprecision(1) &lt;&lt;  smallest &lt;&lt; fixed &lt;&lt; endl;
+    }
+    
+}
+                    </pre>
+            </div>
+
             <h4> Week 1 - Junior</h4>
             <h5 class="lead">Jan 3, 2020</h5>
             <br>
