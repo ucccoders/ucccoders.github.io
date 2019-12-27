@@ -21,7 +21,7 @@ FONT SIZES MASTER CONTROL!!!!!!!
 
 @media (min-width: 1px) {  
 html {font-size: 0.4rem;}
-html p, .media {font-size: 1.7rem!important;}
+html p, .media, pre {font-size: 1.7rem!important;}
 h6 {font-size: 1.5rem!important;}
 html h5, html h5 .lead {font-size: 1.8rem!important;}
 .teamname {font-size: 1.7rem !important}
@@ -36,7 +36,7 @@ html h3 {font-size: 2.4rem!important;}
 
 @media (min-width: 200px) {  
 html {font-size: 0.5rem;}
-html p, .media  {font-size: 1.65rem!important;}
+html p, .media, pre  {font-size: 1.65rem!important;}
 h6 {font-size: 1.5rem!important;}
 html h5, html h5 .lead {font-size: 1.8rem!important;}
 html h4, html h4 .card-title {font-size: 2.0rem!important;}
@@ -49,7 +49,7 @@ html h3 {font-size: 2.3rem!important;}
 
 @media (min-width: 510px) {  
 html {font-size: 0.63rem;}
-html p, .media, h6 {font-size: 1.52rem!important;}
+html p, .media, h6, pre {font-size: 1.52rem!important;}
 html h5, html h5 .lead, .teamname {font-size: 1.65rem!important;}
 html h4, html h4 .card-title {font-size: 1.9rem!important;}
 html h3 {font-size: 2.2rem!important;}
@@ -63,7 +63,7 @@ html h3 {font-size: 2.2rem!important;}
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {  
 html {font-size: 0.75rem;}
-html p, .media, h6 {font-size: 1.30rem!important;}
+html p, .media, h6, pre {font-size: 1.30rem!important;}
 html h5, html h5 .lead, .teamname {font-size: 1.3rem!important;}
 html h4, html h4 .card-title {font-size: 1.8rem!important;}
 html h3 {font-size: 2.1rem!important;}
@@ -75,7 +75,7 @@ html h3 {font-size: 2.1rem!important;}
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
 html {font-size: 0.875rem;}
-html p, h6 {font-size: 1.101rem!important;}
+html p, h6, pre {font-size: 1.101rem!important;}
 html h5, html h5 .lead, .teamname {font-size: 1.26rem!important;}
 .media {font-size: 1.133rem!important;}
 html h4, html h4 .card-title {font-size: 1.66rem!important;}
@@ -88,7 +88,7 @@ html h3 {font-size: 2rem!important;}
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {  
 html {font-size: 0.95rem;}
-html p, h6 {font-size: 1.1rem!important;}
+html p, h6, pre {font-size: 1.1rem!important;}
 html h5, html h5 .lead, .media, .teamname {font-size: 1.26rem!important;}
 html h4, html h4 .card-title {font-size: 1.542069rem!important;}
 html h3 {font-size: 1.869rem!important;}

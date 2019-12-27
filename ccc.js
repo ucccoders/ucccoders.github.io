@@ -5,4 +5,4 @@ function hideshow(k) {
     } else {
       x.style.display = "block";
     }
-  }
+}

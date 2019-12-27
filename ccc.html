@@ -80,51 +80,131 @@
         <div class="block pb-5">
                 <hr class = "line1">
             <h2 class = "pt-4"> Resources</h2>
+            <hr>
+
+            <h4 class = "pb-3"> Registration Instructions</h4>
+
+            <p> If you wish to write the CCC this year, please fill out this <a target="_blank"href = "https://docs.google.com/forms/d/1WvnOWGzzhL_vk8m7F9LNgQ6WmhuwuFKSt3g3ZYJKWN0/">Google Form</a> first. </p>
+
+            <p> The <a target="_blank"href = "https://cccgrader.com/index.php"> CCC Online Grader</a> is used to participate in the actual competition and to work on past CCC problems for practice. The grader allows you to upload your code for automatic scoring. </p>
+            <p> If you have made an account in previous years, you should be good to go. If you have forgotten your login info, check your email as you may have received your username/password via email when you registered. If not, please contact Mr. Miskew at pmiskew@ucc.on.ca.  </p>
+            <p> If you don't have an account for the online grader yet, register <a target="_blank"href = "https://cccgrader.com/register.php">here</a> using your legal name. Please also contact kevin.liu@ucc.on.ca for the school number. After registering you will wait for Mr. Miskew's approval, which will grant you full access to the system. </p>
             
-            <hr class="my-4">
+            <hr>
+            <h4 class = "pb-3"> Prep Resources</h4>
+
+            <p>For any new contest takers, you should familiarize yourself with the contest <a target = "_blank" href = "https://cemc.uwaterloo.ca/contests/computing/details.html">info</a> and <a target = "_blank" href = "https://cccgrader.com/rules.pdf">rules</a>, as well as <a href = "https://cemc.uwaterloo.ca/contests/computing/examples.html" target = "_blank">an example problem to learn inputs/outputs</a>. </p>
+
+            <p> Once logged in to the official CCC online grader, you will have access to some past contest questions on which your answers can be graded as per the official CCC rules.</p>
+            <p><a href = "https://dmoj.ca/problems/" target = "_blank">DMOJ</a> is a website with a large database of questions from coding contests including the CCC. It interestingly has more CCC problems available than on the official grader and answers/editorials to some problems (to find CCC problems, just search CCC in the problem search box). Please note that while DMOJ will also grade your answers once you make an account, the format is slightly different compared to the official CCC grader so make sure you're familiar with the official one before the contest. </p>
 
             
+
             
-            <h2 class = "pb-2"> Weekly Problem</h2>
+            <hr><h2 class = "pb-2"> Weekly Problem</h2>
             <h5> Weekly CCC Prep Problems will be posted each Friday, and a solution will be posted the following week. </h5>
             <p> These problems will also be thoroughly discussed during our club's Thursday after school meetings. </p>
             <hr class="my-4">
 
             
             <h4> Week 1 - Junior</h4>
-            <h5 class="lead">Jan 10, 2020</h5>
+            <h5 class="lead">Jan 3, 2020</h5>
             <br>
             <p><a href = "javascript:void(0);" onclick="hideshow('week1jp')"> Problem</a></p>
             <div class = "problem pb-4" id = "week1jp" >
                 
-                <p>The Fibonacci Sequence is the famous sequence 1, 1, 2, 3, 5, 8, 13..., where the first two terms are 1 and each term after that is the sum of the two terms prior to it. Today we will look at different methods of generating the fibonacci sequence and similar sequences. </p>
-                <p class = "code">def fibonacci(n): </p>
+                <p>A vote is held after singer A and singer B compete in the final round of a singing competition. Your job is to count the votes and determine the outcome.</p>
+                <p><u>Input Specification</u></p>
+                <p> The input will be two lines. The first line will contain V (1 ≤ V ≤ 15), the total number of votes. The second line of input will be a sequence of V characters, each of which will be A or B, representing the votes for a particular singer.</p>
+                <p><u>Output Specification</u></p>
+                <p>The output will be one of three possibilities: A, if there are more A votes than B votes, B if there are more B votes than A votes, and Tie if there is an equal number of A and B votes.</p>
+                <p><u>Sample Input</u></p>
+                <p class = "code">6<br>ABBABB </p><br>
+                <p><u>Sample Output</u></p>
+                <p class = "code">B </p>
+
                 <hr>
             </div>
-            <p>Solution (to be posted Jan 15)</p>
+            <p><a href = "javascript:void(0);" onclick="hideshow('week1js')"> Solution</a></p>
             <br>
             <div class = "problem pb-4" id = "week1js">
-                <p>The Fibonacci Sequence is the famous sequence 1, 1, 2, 3, 5, 8, 13..., where the first two terms are 1 and each term after that is the sum of the two terms prior to it. Today we will look at different methods of generating the fibonacci sequence and similar sequences. </p>
-                <p class = "code">def fibonacci(n): </p>
-                <hr>
+                <p> This problem was the second question from the 2014 Junior CCC competition. </p>
+                <p> A python 3 solution by Kevin Liu is shown below.</p>
+                <pre>
+length = int(input(""))
+    a = 0
+    b = 0
+    votes = input("")
+    for i in range(len(votes)):
+        if votes[i] == 'A':
+            a += 1
+    b = length - a
+    if a > b:
+        print("A")
+    elif b > a:
+        print("B")
+    else:
+        print("Tie")
+                    </pre>
             </div>
 
             <h4> Week 1 - Senior</h4>
-            <h5 class="lead">Jan 10, 2020</h5>
+            <h5 class="lead">Jan 3, 2020</h5>
             <br>
             <p><a href = "javascript:void(0);"onclick="hideshow('week1sp')"> Problem</a></p>
             <div class = "problem pb-4" id = "week1sp" >
                 
-                <p>The Fibonacci Sequence is the famous sequence 1, 1, 2, 3, 5, 8, 13..., where the first two terms are 1 and each term after that is the sum of the two terms prior to it. Today we will look at different methods of generating the fibonacci sequence and similar sequences. </p>
-                <p class = "code">def fibonacci(n): </p>
-                <hr>
+                <p>You are hosting a party and do not have room to invite all of your friends. You use the following unemotional mathematical method to determine which friends to invite.</p>
+                <p>Number your friends 1,2,…,K and place them in a list in this order. Then perform m rounds. In each round, use a number to determine which friends to remove from the ordered list.</p>
+                <p>The rounds will use numbers r<sub>1</sub>,r<sub>2</sub>,…,r<sub>m</sub>. In round i, remove all the remaining people in positions that are multiples of r<sub>i</sub> (that is, r<sub>i</sub>,2r<sub>i</sub>,3r<sub>i</sub>,…) The beginning of the list is position 1.</p>
+                <p>Please output the numbers of the friends that remain after this removal process.</p>
+                <p><u>Input Specification</u></p>
+                <p>The first line of input contains the integer K (1 ≤ K ≤ 100). The second line of input contains the integer m (1 ≤ m ≤ 10), which is the number of rounds of removal. The next m lines each contain one integer. The i<sup>th</sup> of these lines (1 ≤ i ≤ m) contains r<sub>i</sub> (2 ≤ ri ≤ 100) indicating that every person at a position which is multiple of r<sub>i</sub> should be removed.</p>
+                <p><u>Output Specification</u></p>
+                <p>The output will be one of three possibilities: A, if there are more A votes than B votes, B if there are more B votes than A votes, and Tie if there is an equal number of A and B votes.</p>
+                <p><u>Sample Input</u></p>
+                <p class = "code">10<br>2<br>2<br>3<br> </p><br>
+                <p><u>Sample Output</u></p>
+                <p class = "code">1<br>3<br>7<br>9<br> </p><br>
+                <p><u>Explanation of Sample Output</u></p>
+                <p>Initially, our list of invitees is {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}. There will be two rounds of removals. After the first round of removals, we remove the even positions (i.e., every second position), which causes our list of invitees to be {1, 3, 5, 7, 9}. After the second round of removals, we remove every 3rd remaining invitee: thus, we keep 1 and 3, remove 5 and keep 7 and 9, which leaves us with an invitee list of {1, 3, 7, 9}.</p>
+
             </div>
             <p><a href = "javascript:void(0);"onclick="hideshow('week1ss')"> Solution</a></p>
             <br>
             <div class = "problem pb-4" id = "week1ss">
-                <p>The Fibonacci Sequence is the famous sequence 1, 1, 2, 3, 5, 8, 13..., where the first two terms are 1 and each term after that is the sum of the two terms prior to it. Today we will look at different methods of generating the fibonacci sequence and similar sequences. </p>
-                <p class = "code">def fibonacci(n): </p>
-                <hr>
+                <p> This problem was the first question from the 2014 Senior CCC competition. </p>
+                <p> A python 3 solution by DM:OJ user MowMowChow is shown below.</p>
+                <pre>
+numberofpeople = int(input())
+rounds = int(input())
+spacing = []
+people = []
+counter = 1
+
+<i>#the rounds of removal</i>
+for i in range(rounds):
+    spacing.append(int(input()))
+
+<i>#putting each 'person' into a list</i>
+for i in range(numberofpeople):
+    i += 1
+    people.append(i)
+
+<i>#removes the people</i>
+for i in spacing:
+    for z in people:
+        if counter == i:
+            people.remove(z)
+            counter = 1
+
+        counter +=1
+    counter = 1
+
+<i>prints the guests</i>
+for i in people:
+    print(i)
+                    </pre>
             </div>
         
         </div>
