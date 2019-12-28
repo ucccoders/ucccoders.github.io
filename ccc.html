@@ -280,7 +280,7 @@ int main(int argc, const char * argv[]) {
             <br>
             <p><a href = "javascript:void(0);" onclick="hideshow('week1jp')"> Problem</a></p>
             <div class = "problem pb-4" id = "week1jp" >
-                
+                <p>Here's a straightforward warmup question so we can get back into things: </p> 
                 <p>A vote is held after singer A and singer B compete in the final round of a singing competition. Your job is to count the votes and determine the outcome.</p>
                 <p><u>Input Specification</u></p>
                 <p> The input will be two lines. The first line will contain V (1 ≤ V ≤ 15), the total number of votes. The second line of input will be a sequence of V characters, each of which will be A or B, representing the votes for a particular singer.</p>
@@ -293,12 +293,13 @@ int main(int argc, const char * argv[]) {
 
                 <hr>
             </div>
+            
             <p> Solution will be posted on Jan 10</p>
             <!--<p><a href = "javascript:void(0);" onclick="hideshow('week1js')"> Solution</a></p>-->
             <br>
             <div class = "problem pb-4" id = "week1js">
                 <p> This problem was the second question from the 2014 Junior CCC competition. </p>
-                <p> A python 3 solution by Kevin Liu is shown below.</p>
+                <p> My python 3 solution is shown below.</p>
                 <pre>
 length = int(input(""))
     a = 0
@@ -344,36 +345,51 @@ length = int(input(""))
             <br>
             <div class = "problem pb-4" id = "week1ss">
                 <p> This problem was the first question from the 2014 Senior CCC competition. </p>
-                <p> A python 3 solution by DM:OJ user MowMowChow is shown below.</p>
+                <p> My C++ solution is shown below.</p>
                 <pre>
-numberofpeople = int(input())
-rounds = int(input())
-spacing = []
-people = []
-counter = 1
+#include &lt;iostream&gt;
 
-<i>#the rounds of removal</i>
-for i in range(rounds):
-    spacing.append(int(input()))
+int main() {
 
-<i>#putting each 'person' into a list</i>
-for i in range(numberofpeople):
-    i += 1
-    people.append(i)
-
-<i>#removes the people</i>
-for i in spacing:
-    for z in people:
-        if counter == i:
-            people.remove(z)
-            counter = 1
-
-        counter +=1
-    counter = 1
-
-<i>prints the guests</i>
-for i in people:
-    print(i)
+    using namespace std;
+    int K = 0;   // n = number of friends
+    cin &gt;&gt; K;
+    
+    int m = 0;   // m = number of rounds
+    cin &gt;&gt; m;
+    
+    int round [m];   // stores rounds to remove
+    
+    for(int i = 0; i &lt; m; i++){
+        cin &gt;&gt; round[i];
+    }
+    
+    int tests [K];   // stores the status of friends
+    
+    for(int i = 0; i &lt; K; i++){
+        
+        tests[i] = 1;  // start by marking friends 1 for all invited
+        
+    }
+    
+    for(int i = 0; i &lt; m; i++){  // repeat the following for all of the removal rounds
+        int counter = 0;                // start a counter at zero
+        for(int k = 0; k &lt; K; k++){
+            if(tests[k] != 0){              // If the friend hasn't been removed already,
+                counter += 1;               // Increment the counter by 1
+                if(counter%round[i] == 0){  // If counter is divisible by desired multiple,
+                    tests[k] = 0;           // Remove the friend by marking him 0
+                }
+            }
+        }
+    }
+    
+    for(int i = 0; i &lt; K; i++){
+        if(tests[i] != 0){
+            cout &lt;&lt; i+1 &lt;&lt; endl;  // Print all the friends still invited
+        }
+    }
+}
                     </pre>
             </div>
         
@@ -393,4 +409,4 @@ for i in people:
   <script src="ccc.js"></script>
 
 </body>
-</html>x
+</html>
