@@ -216,60 +216,51 @@ public class CCCJ2MagicSquare {
             <p><a href = "javascript:void(0);"onclick="hideshow('week1ss')"> Solution</a></p>
             <br>
             <div class = "problem pb-4" id = "week1ss">
-                <p> This problem was the first question from the 2014 Senior CCC competition. </p>
+                <p> This problem was the first question from the 2018 Senior CCC competition. </p>
                 <p> A C++ solution by Kevin Liu is shown below.</p>
                 <pre>
 #include <iostream>
 #include <iomanip>
 #include <string>
 #include <cmath>
-#include <sstream>
 #include <algorithm>
-
 using namespace std;
 
-int k = 0;
-double counter = 0;
-int w = 0;
-double smallest = 2000000001;
-
-int main(int argc, const char * argv[]) {
+int main() {
 
     int num;
-    cin &gt;&gt; num;
-    
+    cin &gt;&gt; num;  //number of towns
+
     cout &lt;&lt; fixed;
     
-    double towns [num];
-    
+    double towns [num];  // locations of towns (we need this to be a double to avoid
+                                        //      automatic conversion to integer values
+                                        //      when processing the distance between
+                                        //      towns, where a decimal may be produced)
     for(int i=0; i &lt; num; i++){
-        cin &gt;&gt; k;
+        int k = 0; cin &gt;&gt; k;    // inputs locations of towns and stores in array
         towns[i]=k;
     }
     
-    sort(towns, towns + num);
+    sort(towns, towns + num);  // sort the locations of the towns for easier processing
     
-    for(int i = 1; i &lt; num-1; i++){
-        counter = 0;
-        counter += (towns[i-1]-towns[i])/-2;
-        counter += (towns[i]-towns[i+1])/-2;
-       
-        if (counter &lt; smallest){
-            smallest = counter;
-        }
+    double smallest = 2000000001.0;// stores the smallest neighbourhood found so far.
+                                   // We set this to a number greater than the max possible
+                                   // for this problem, so we can easily replace it by the smaller
+                                   // value when one is found using min().
+                                  
+                                 
+    for(int i = 1; i &lt; num-1; i++){ // Loop over all towns with non-infinite neighbourhoods
+        double neighbourhoodSize = 0; 
+        neighbourhoodSize += (towns[i] - towns[i-1])/2; // add left half of neighbourhood
+        neighbourhoodSize += (towns[i+1] - towns[i])/2; // add right half of neighbourhood
         
+        smallest = min(neighbourhoodSize, smallest);// if we've found a smaller neighbourhood,
+                                                    // store that neighbourhood size as new smallest
     }
-    
-    if((smallest - floor(smallest)) &lt; 0.0000001) {
-        
-        int answer = 0;
-        answer += smallest;
-        cout  &lt;&lt; fixed &lt;&lt; answer;
-        cout &lt;&lt; ".0" &lt;&lt; endl;
-    }
-    else{
-        cout &lt;&lt; setprecision(1) &lt;&lt;  smallest &lt;&lt; fixed &lt;&lt; endl;
-    }
+
+    cout &lt;&lt; setprecision(1) &lt;&lt; fixed; // round output to 1 decimal place
+    cout &lt;&lt; smallest &lt;&lt; endl; // output answer
     
 }
                     </pre>
@@ -409,4 +400,4 @@ int main() {
   <script src="ccc.js"></script>
 
 </body>
-</html>
+</html>x
