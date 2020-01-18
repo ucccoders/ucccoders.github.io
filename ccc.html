@@ -101,6 +101,100 @@
             <p> These problems will also be thoroughly discussed during our club's Thursday after school meetings, and will get progressively harder each week. All answers are provided by Kevin Liu unless otherwise credited.</p>
             <hr class="my-4">
 
+            <h4> Week 3 - Junior</h4>
+            <h5 class="lead">Jan 17, 2020</h5>
+            <br>
+            <p><a href = "javascript:void(0);" onclick="hideshow('week3jp')"> Problem</a></p>
+            <div class = "problem pb-4" id = "week3jp" >
+                <p> This week's problem isn't too difficult but requires using a loop inside another loop.</p>
+                
+                <p> You and your friend have come up with a way to send messages back and forth.
+                    Your friend can encode a message to you by writing down a positive integer 𝑁 and a symbol. You can decode that message by writing out that symbol 𝑁 times in a row on one line.
+                    Given a message that your friend has encoded, decode it.</p>
+                <p><u>Input Specification</u></p>
+                <p> The first line of input contains 𝐿, the number of lines in the message.</p>
+                <p> The next 𝐿 lines each contain one positive integer less than 80, followed by one space, followed by a (non-space) character.</p>
+                <p><u>Output Specification</u></p>
+                <p>The output should be 𝐿 lines long. Each line should contain the decoding of the corresponding line of the input. Specifically, if line 𝑖+1 of the input contained 𝑁 x, then line 𝑖 of the output should contain just the character x printed 𝑁 times.</p>
+                <p><u>Sample Input</u></p>
+                <pre>
+4
+9 +
+3 -
+12 A
+2 X</pre>
+                
+                <p><u>Sample Output</u></p>
+                <pre>
++++++++++
+---
+AAAAAAAAAAAA
+XX</pre>
+               
+                <hr>
+            </div>
+            <p> Solution will be posted on Jan 24</p>
+            <!--<p><a href = "javascript:void(0);" onclick="hideshow('week3js')"> Solution</a></p>-->
+            <br>
+            <div class = "problem pb-4" id = "week3js">
+                <p> This problem was the second question from the 2019 Junior CCC competition. You can visit that question on the CCC Grader to grade your own solution.  </p>
+                <p> My Python Solution is shown below.</p>
+                <pre>
+a = int(input(""))
+for i in range(a):
+    n, c = input("").split()
+    n = int(n)
+    s = ""
+    for j in range(n):
+        s = s + c
+    print(s)
+                    </pre>
+            </div>
+
+            <h4> Week 3 - Senior</h4>
+            <h5 class="lead">Jan 17, 2020</h5>
+            <br>
+            <p><a href = "javascript:void(0);"onclick="hideshow('week3sp')"> Problem</a></p>
+            <div class = "problem pb-4" id = "week3sp" >
+                
+                <p> This week, we look at graph theory, particularly the Breadth-First Search (BFS) Algorithm. </p>
+                <p> There is a genre of fiction called choose your own adventure books. These books allow the reader to make choices for the characters which alters the outcome of the story.
+
+                    For example, after reading the first page of a book, the reader may be asked a choice, such as "Do you pick up the rock?" If the reader answers "yes", they are directed to continue reading on page 47, and if they choose "no", they are directed to continue reading on page 18. On each of those pages, they have further choices, and so on, throughout the book. Some pages do not have any choices, and thus these are the "ending" pages of that version of the story. There may be many such ending pages in the book, some of which are good (e.g., the hero finds treasure) and others which are not (e.g., the hero finds a leftover sandwich from 2001).</p>
+                <p> You are the editor of one of these books, and you must examine two features of the choose your own adventure book:</p>
+                <p> 1. Ensure that every page can be reached – otherwise, there is no reason to pay to print a page which no one can ever read;<br>
+                    2. Find the shortest path, so that readers will know what the shortest amount of time they need to finish one version of the story.</p>
+                <p>Given a description of the book, examine these two features.</p>
+                <p><u>Input Specification</u></p>
+                <p>The first line of input contains 𝑁 (1 ≤ 𝑁 ≤ 10000), the number of pages in the book. Each of the next 𝑁 lines contain an integer 𝑀𝑖 (1 ≤ 𝑖 ≤ 𝑁; 0 ≤ 𝑀𝑖 ≤ 𝑁), which is the number of different options from page 𝑖, followed by 𝑀𝑖 space-separated integers in the range from 1 to 𝑁, corresponding to each of the pages to go to next from page 𝑖. It will also be the case 𝑀<sub>1</sub> + 𝑀<sub>2</sub> + ⋯ + 𝑀<sub>N</sub> is at most 10000.</p>
+                <p><u>Output Specification</u></p>
+                <p>The output will be two lines. The first line will contain Y if all pages are reachable, and N otherwise.
+
+                    The last line will contain a non-negative integer 𝐾, which is the shortest path a reader can take while reading this book. There will always be a finite shortest path.</p>
+                <p><u>Sample Input</u></p>
+                <pre>
+3
+2 2 3
+0
+1 1
+                </pre>
+                <p><u>Sample Output</u></p>
+                <p class = "code">Y<br>2 </p><br>
+                <p><u>Explanation of Sample Output</u></p>
+                <p>Every page is reachable, since from page 1, we can reach pages 2 and 3. The shortest path is the path 1→2, which contains two pages.</p>
+
+            </div>
+            <p> Solution will be posted on Jan 24</p>
+            <!--<p><a href = "javascript:void(0);"onclick="hideshow('week3ss')"> Solution</a></p>-->
+            <br>
+            <div class = "problem pb-4" id = "week3ss">
+                <p> This problem was the fifth question from the 2018 Junior CCC competition. You can visit that problem page on the CCC Grader to grade your own solution. </p>
+                <p> A C++ solution by Kevin Liu is shown below.</p>
+                <pre>
+MUST WRITE BETTER ONE!!!
+                </pre>
+            </div>
+
             
             <h4> Week 2 - Junior</h4>
             <h5 class="lead">Jan 10, 2020</h5>
@@ -128,11 +222,11 @@
 
                 <hr>
             </div>
-            <p> Solution will be posted on Jan 17</p>
-            <!--<p><a href = "javascript:void(0);" onclick="hideshow('week2js')"> Solution</a></p>-->
+            
+            <p><a href = "javascript:void(0);" onclick="hideshow('week2js')"> Solution</a></p>
             <br>
             <div class = "problem pb-4" id = "week2js">
-                <p> This problem was the second question from the 2016 Junior CCC competition. </p>
+                <p> This problem was the second question from the 2016 Junior CCC competition. Visit that page on the CCC Grader to grade your own solution. </p>
                 <p> A Java solution by Mr. Miskew is shown below.</p>
                 <pre>
 import java.util.Scanner;
@@ -214,18 +308,17 @@ public class CCCJ2MagicSquare {
                 <p>The neighbourhoods around 0 and 16 are infinite. The neighbourhood around 4 is 5 units (2 to the left, and 3 to the right). The neighbourhood around 10 is 5.5 units (3 to the left and 2.5 to the right). The neighbourhood around 15 is 3.0 units (2.5 to the left and 0.5 to the right).</p>
 
             </div>
-            <p> Solution will be posted on Jan 17</p>
-            <!--<p><a href = "javascript:void(0);"onclick="hideshow('week2ss')"> Solution</a></p>-->
+            
+            <p><a href = "javascript:void(0);"onclick="hideshow('week2ss')"> Solution</a></p>
             <br>
             <div class = "problem pb-4" id = "week2ss">
-                <p> This problem was the first question from the 2018 Senior CCC competition. </p>
+                <p> This problem was the first question from the 2018 Senior CCC competition. Visit that page on the CCC Grader to score your own solution. </p>
                 <p> A C++ solution by Kevin Liu is shown below.</p>
                 <pre>
-#include <iostream>
-#include <iomanip>
-#include <string>
-#include <cmath>
-#include <algorithm>
+#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+#include &lt;cmath&gt;
+#include &lt;algorithm&gt;
 using namespace std;
 
 int main() {
@@ -237,7 +330,7 @@ int main() {
     
     double towns [num];  // locations of towns (we need this to be a double to avoid
                                         //      automatic conversion to integer values
-                                        //      when processing the distance between
+                                        //      when processing the point between
                                         //      towns, where a decimal may be produced)
     for(int i=0; i &lt; num; i++){
         int k = 0; cin &gt;&gt; k;    // inputs locations of towns and stores in array
@@ -291,7 +384,7 @@ int main() {
             <p><a href = "javascript:void(0);" onclick="hideshow('week1js')"> Solution</a></p>
             <br>
             <div class = "problem pb-4" id = "week1js">
-                <p> This problem was the second question from the 2014 Junior CCC competition. </p>
+                <p> This problem was the second question from the 2014 Junior CCC competition. Visit that page on the CCC Grader to score your own solution. </p>
                 <p> My python 3 solution is shown below.</p>
                 <pre>
 length = int(input(""))
@@ -336,7 +429,7 @@ length = int(input(""))
             <p><a href = "javascript:void(0);"onclick="hideshow('week1ss')"> Solution</a></p>
             <br>
             <div class = "problem pb-4" id = "week1ss">
-                <p> This problem was the first question from the 2014 Senior CCC competition. </p>
+                <p> This problem was the first question from the 2014 Senior CCC competition. Visit that page on the CCC Grader to score your own solution.  </p>
                 <p> My C++ solution is shown below.</p>
                 <pre>
 #include &lt;iostream&gt;
