@@ -29,7 +29,7 @@
 				<a class="nav-link nav-disappear" href="ccc.html">CCC Prep</a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link nav-disappear" href="index.html#projects">Projects</a>
+			  <a class="nav-link nav-disappear" href="projects.html">Projects</a>
 			</li>
 
 			<li class="nav-item">
@@ -188,9 +188,85 @@ for i in range(a):
             <br>
             <div class = "problem pb-4" id = "week3ss">
                 <p> This problem was the fifth question from the 2018 Junior CCC competition. You can visit that problem page on the CCC Grader to grade your own solution. </p>
-                <p> A C++ solution by Kevin Liu is shown below.</p>
+                <p> My C++ solution (BFS) is shown below.</p>
                 <pre>
-MUST WRITE BETTER ONE!!!
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+int main() {
+
+    int n; cin &gt;&gt; n;
+    vector&lt;vector&lt;int&gt;&gt; adj; // stores adjacency list of graph
+    adj.push_back({}); // to simplify, we correct the index numbers so they match the page numbers
+
+    vector&lt;int&gt; zeros;
+
+    int m0, mj;
+    for(int i = 1; i &lt;= n; i++){
+        cin &gt;&gt; m0;
+        adj.push_back({});
+        if(m0 == 0){
+            zeros.push_back(i);
+        }
+        for(int j = 0; j &lt; m0; j++){
+            cin &gt;&gt; mj;
+            adj[i].push_back(mj);
+        }
+    }
+
+    vector&lt;int&gt; visited (n+1);
+    visited[0] = 1;
+    visited[1] = 1;
+
+    vector&lt;int&gt; current; //current and next will be used for the BFS
+    vector&lt;int&gt; next;
+
+    current.push_back(1);
+    int distance = 2;
+
+    while(!current.empty()){ //Main BFS algorithm is here. Learn the BFS algorithm at:
+                // https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
+        for(auto page : current){
+            for(auto nextPage : adj[page]){
+                if(visited[nextPage] == 0){
+                    next.push_back(nextPage);
+                    visited[nextPage] = distance;
+                }
+            }
+        }
+        distance += 1;
+        current = next;
+        next.clear();
+    }
+
+    bool allVisited = true; // Check whether all pages are visited
+    for(int i = 1; i &lt;= n; i++){
+        if(visited[i] == 0){
+            allVisited = false;
+            break;
+        }
+    }
+
+    int shortestPath = 2147000000;
+    for(auto endPage : zeros){ // Look through all ending pages for the shortest path.
+        if(visited[endPage] != 0){
+            shortestPath = min(shortestPath, visited[endPage]);
+        }
+        
+    }
+
+    if(allVisited){
+        cout &lt;&lt; "Y" &lt;&lt; endl;
+    }
+    else{
+        cout &lt;&lt; "N" &lt;&lt; endl;
+    }
+
+    cout &lt;&lt; shortestPath &lt;&lt; endl;
+
+}
                 </pre>
             </div>
 
@@ -312,7 +388,7 @@ public class CCCJ2MagicSquare {
             <br>
             <div class = "problem pb-4" id = "week2ss">
                 <p> This problem was the first question from the 2018 Senior CCC competition. Visit that page on the CCC Grader to score your own solution. </p>
-                <p> A C++ solution by Kevin Liu is shown below.</p>
+                <p> My C++ solution is shown and annotated below.</p>
                 <pre>
 #include &lt;iostream&gt;
 #include &lt;iomanip&gt;
