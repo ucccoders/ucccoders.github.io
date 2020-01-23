@@ -101,6 +101,199 @@
             <p> These problems will also be thoroughly discussed during our club's Thursday after school meetings, and will get progressively harder each week. All answers are provided by Kevin Liu unless otherwise credited.</p>
             <hr class="my-4">
 
+            <h4> Week 4 - Junior</h4>
+            <h5 class="lead">Jan 24, 2020</h5>
+            <br>
+            <p><a href = "javascript:void(0);" onclick="hideshow('week4jp')"> Problem</a></p>
+            <div class = "problem pb-4" id = "week4jp" >
+                
+                <p> You have been asked by a parental unit to do your chores.
+
+                    Each chore takes a certain amount of time, but you may not have enough time to do all of your chores, since you can only complete one chore at a time. You can do the chores in any order that you wish.
+                    
+                    What is the largest amount of chores you can complete in the given amount of time?</p>
+                <p><u>Input Specification</u></p>
+                <p> The first line of input consists of an integer 𝑇 (0 ≤ 𝑇 ≤ 100000), which is the total number of minutes you have available to complete your chores.</p>
+                <p> The second line of input consists of an integer 𝐶 (0 ≤ 𝐶 ≤ 100), which is the total number of chores that you may choose from. The next 𝐶 lines contain the (positive integer) number of minutes required to do each of these chores. You can assume that each chore will take at most 100000 minutes.</p>
+                <p><u>Output Specification</u></p>
+                <p>The output will be the maximum number of chores that can be completed in time 𝑇.</p>
+                <p><u>Sample Input</u></p>
+                <pre>
+6
+3
+3
+6
+3</pre>
+                
+                <p><u>Sample Output</u></p>
+                <pre>
+2</pre>
+               
+                <hr>
+            </div>
+            <p> Solution will be posted on Jan 31</p>
+            <!--<p><a href = "javascript:void(0);" onclick="hideshow('week4js')"> Solution</a></p>-->
+            <br>
+            <div class = "problem pb-4" id = "week4js">
+                <p> This problem was the fourth question from the 2013 Junior CCC competition. You can visit that question on the CCC Grader to grade your own solution.  </p>
+                <p> My Python Solution is shown below.</p>
+                <pre>
+t = int(input(""))                  # how much time you have
+c = int(input(""))                  # how many chores
+
+availableChores = []                # stores times of available chores
+
+for i in range(c):
+    availableChores.append(int(input("")))
+
+availableChores.sort()              # sorts the times of available chores in increasing order
+
+
+                    # now, we go through the list of available chores, keeping track of how much time
+                    # has passed and counting how many chores we've done. 
+
+
+elapsedTime = 0                     # how much time has passed so far. This starts at zero.
+choresFinished = 0                  # counter for number of chores finished
+
+for chore in availableChores:       # for each chore in availableChores, 
+    elapsedTime += chore            # do a chore
+    if elapsedTime &gt; t:             # if we're out of time, stop doing chores
+        break;
+    choresFinished += 1             # count if we've completed a chore without running out of time
+
+print(choresFinished)
+                    
+                    </pre>
+            </div>
+
+            <h4> Week 4 - Senior</h4>
+            <h5 class="lead">Jan 24, 2020</h5>
+            <br>
+            <p><a href = "javascript:void(0);"onclick="hideshow('week4sp')"> Problem</a></p>
+            <div class = "problem pb-4" id = "week4sp" >
+                
+                <p> You have a few minutes before your class starts, and you decide to compare the heights of your classmates. You don't have an accurate measuring device, so you just compare relative heights between two people: you stand two people back-to-back, and determine which one of the two is taller. Conveniently, none of your classmates are the same height, and you always compare correctly (i.e., you never make a mistake in your comparisons).
+
+                    After you have done all of your comparisons, you would like to determine who the tallest person is between two particular classmates.</p>
+                <p><u>Input Specification</u></p>
+                <p>The first line contains two integers 𝑁 and 𝑀 separated by one space. 𝑁, the number of people in the class, is an integer with 1 ≤ 𝑁 ≤ 1000000. 𝑀, the number of comparisons that have already been done, is an integer with 1 ≤ 𝑀 ≤ 10000000. Each of the next 𝑀 lines contains two distinct integers 𝑥 and 𝑦 (1 ≤ 𝑥, 𝑦 ≤ 𝑁) separated by a space, indicating that person number 𝑥 was determined to be taller than person number 𝑦. Finally, the last line contains two distinct integers 𝑝 and 𝑞 (1 ≤ 𝑝, 𝑞 ≤ 𝑁) separated by one space: your goal is to determine, if possible, whether person 𝑝 is taller than person 𝑞. Note that it may be the case that neither 𝑝 nor 𝑞 occur in the input concerning measurements between classmates, and each measurement between any two particular people will be recorded exactly once.</p>
+                <p><u>Output Specification</u></p>
+                <p>The output is one line, containing one of three possible strings: yes (if 𝑝 is taller than 𝑞), no (if 𝑞 is taller than 𝑝), unknown (if there is not enough information to determine the relative heights of 𝑝 and 𝑞).</p>
+                <p><u>Sample Input</u></p>
+                <pre>
+10 3
+8 4
+3 8
+4 2
+3 2
+                </pre>
+                <p><u>Sample Output</u></p>
+                <p class = "code">yes<br> </p><br>
+                <p><u>Explanation of Sample Output</u></p>
+                <p>The input tells us that 3 is taller than 8, 8 is taller than 4, and 4 is taller than 2. Therefore, 3 is taller than 2.</p>
+
+            </div>
+            <p> Solution will be posted on Jan 31</p>
+            <!---<p><a href = "javascript:void(0);"onclick="hideshow('week3ss')"> Solution</a></p>----->
+            <br>
+            <div class = "problem pb-4" id = "week3ss">
+                <p> This problem was the fourth question from the 2013 Senior CCC competition. You can visit that problem page on the CCC Grader to grade your own solution. </p>
+                <p> My C++ solution (BFS) is shown below.</p>
+                <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+int main() {
+
+    int n, m; 
+    cin &gt;&gt; n &gt;&gt; m;
+    vector&lt;vector&lt;int&gt;&gt; adj (n+1);
+
+
+    int a, b;
+    for(int i = 0; i &lt; m; i++){
+        cin &gt;&gt; a &gt;&gt; b;
+        adj[a].push_back(b);
+
+    }
+
+    vector&lt;int&gt; current;
+    vector&lt;int&gt; next;
+    vector&lt;bool&gt; visited (n+1);
+
+    cin &gt;&gt; a &gt;&gt; b;
+
+    current.push_back(a);
+    visited[a] = true;
+
+    bool found = false;
+    while(!found and current.size() &gt; 0){
+        for(auto x : current){
+            for(auto y : adj[x]){
+                if(!visited[y]){
+                    next.push_back(y);
+                }
+                if(y == b){
+                    found = true;
+                    break;
+                }
+            }
+            visited[x] = true;
+        }
+        current = next;
+        next.clear();
+    }
+
+    if(found){
+        cout &lt;&lt; "yes" &lt;&lt; endl;
+    }
+    else{
+        current.clear();
+        next.clear();
+        vector&lt;bool&gt; temp (n+1);
+        visited = temp;
+
+
+        current.push_back(b);
+
+        visited[b] = true;
+
+
+
+        while(!found and current.size() &gt; 0){
+            for(auto x : current){
+                for(auto y : adj[x]){
+                    if(!visited[y]){
+                        next.push_back(y);
+                    }
+                    if(y == a){
+                        found = true;
+                        break;
+                    }
+                }
+                visited[x] = true;
+            }
+            current = next;
+            next.clear();
+        }
+
+        if(found){
+            cout &lt;&lt; "no" &lt;&lt; endl;
+        }
+        else{
+            cout &lt;&lt; "unknown" &lt;&lt; endl;
+        }
+
+    }
+
+
+}
+                </pre>
+            </div>
+
             <h4> Week 3 - Junior</h4>
             <h5 class="lead">Jan 17, 2020</h5>
             <br>
@@ -132,8 +325,7 @@ XX</pre>
                
                 <hr>
             </div>
-            <p> Solution will be posted on Jan 24</p>
-            <!--<p><a href = "javascript:void(0);" onclick="hideshow('week3js')"> Solution</a></p>-->
+            <p><a href = "javascript:void(0);" onclick="hideshow('week3js')"> Solution</a></p>
             <br>
             <div class = "problem pb-4" id = "week3js">
                 <p> This problem was the second question from the 2019 Junior CCC competition. You can visit that question on the CCC Grader to grade your own solution.  </p>
@@ -145,7 +337,8 @@ for i in range(a):
     n = int(n)
     s = ""
     for j in range(n):
-        s = s + c
+        s = s + c  //makes string s contain n characters c. You can actually write s = n*c in python, but 
+                   //similar functionality may not be available in other languages. 
     print(s)
                     </pre>
             </div>
@@ -183,8 +376,7 @@ for i in range(a):
                 <p>Every page is reachable, since from page 1, we can reach pages 2 and 3. The shortest path is the path 1→2, which contains two pages.</p>
 
             </div>
-            <p> Solution will be posted on Jan 24</p>
-            <!--<p><a href = "javascript:void(0);"onclick="hideshow('week3ss')"> Solution</a></p>-->
+            <p><a href = "javascript:void(0);"onclick="hideshow('week3ss')"> Solution</a></p>
             <br>
             <div class = "problem pb-4" id = "week3ss">
                 <p> This problem was the fifth question from the 2018 Junior CCC competition. You can visit that problem page on the CCC Grader to grade your own solution. </p>
