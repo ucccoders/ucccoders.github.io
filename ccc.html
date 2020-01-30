@@ -101,6 +101,308 @@
             <p> These problems will also be thoroughly discussed during our club's Thursday after school meetings, and will get progressively harder each week. All answers are provided by Kevin Liu unless otherwise credited.</p>
             <hr class="my-4">
 
+            <h4> Week 5 - Junior</h4>
+            <h5 class="lead">Jan 31, 2020</h5>
+            <br>
+            <p><a href = "javascript:void(0);" onclick="hideshow('week5jp')"> Problem</a></p>
+            <div class = "problem pb-4" id = "week5jp" >
+
+                <p> I promised increasing difficulty, so here it is :)</p>
+                
+                <p> Fiona commutes to work each day. If there is no rush-hour traffic, her commute time is 2 hours. However, there is often rush-hour traffic. Specifically, rush-hour traffic occurs from 07:00 (7am) until 10:00 (10am) in the morning and 15:00 (3pm) until 19:00 (7pm) in the afternoon. During rush-hour traffic, her speed is reduced by half.
+
+                    She leaves either on the hour (at XX:00), 20 minutes past the hour (at XX:20), or 40 minutes past the hour (at XX:40).
+                    
+                    Given Fiona's departure time, at what time does she arrive at work?</p>
+                <p><u>Input Specification</u></p>
+                <p> The input will be one line, which contains an expression of the form HH:MM, in which HH is one of the 24 starting hours (00, 01, ..., 23) and MM is one of the three possible departure minute times (00, 20, 40).</p>
+                <p><u>Output Specification</u></p>
+                <p>Output the time of Fiona's arrival, in the form HH:MM.</p>
+                <p><u>Sample Input</u></p>
+                <pre>
+07:00</pre>
+                
+                <p><u>Sample Output</u></p>
+                <pre>
+10:30</pre>
+                <p><u>Explanation for Sample Output</u></p>
+                <p>Fiona drives for 3 hours in rush-hour traffic, but only travels as far as she normally would after driving for 1.5 hours. During the final 30 minutes (0.5 hours) she is driving in non-rush-hour traffic. Looks like she's gonna need a late slip!
+                </p> 
+                <p><a href = "javascript:void(0);" onclick="hideshow('week5jh')"> Hint (Click to reveal)</a></p>
+                <div class = "problem" id = "week5jh"><p>Instead of being crazy with if statements, try simulating what happens each 10 minutes. If Fiona's in traffic she moves 5 units in 10 minutes, otherwise she moves 10 units. The entire commute is 120 units in this system. Keep simulating until the total distance travelled reaches 120 units, and keep track of the time needed. Hope Fiona isn't late!</p></div>
+                <hr>
+            </div>
+            <p> Solution will be posted on Feb 7</p>
+            <!--<p><a href = "javascript:void(0);" onclick="hideshow('week5js')"> Solution</a></p>-->
+            <br>
+            <div class = "problem pb-4" id = "week5js">
+                <p> This problem was the third question from the 2017 Junior CCC competition. You can visit that question on the CCC Grader to grade your own solution.  </p>
+                <p> My Python Solution is shown below.</p>
+                <pre>
+# We change the HH:MM time into minutes since the
+# start of the day, then simulate the commute
+# in 10 minute chunks.
+
+# Using this time system, traffic occurs between
+# min 420 and 600, and between min 900 and 1140.
+# This function tells us whether our next 10 min will be in traffic.
+
+def traffic (n):
+    if (n &gt;= 420 and n &lt; 600) or (n &gt;= 900 and n &lt; 1140):
+        return True
+    return False
+
+h, m = input().split(":")
+
+h = int(h)
+m = int(m)
+
+# convert HH:MM into minutes since midnight.
+
+time = 60*h + m
+
+# We assume the commute is 120km in length, and without
+# traffic Fiona travels 10km every 10 minutes.
+# However, in traffic, Fiona only travels 5km in 10 minutes.
+# We keep track of how many 10 minute intervals occur
+# until the total distance traveled reaches 120km.
+
+distanceTravelled = 0
+while distanceTravelled &lt; 120:
+    if traffic(time):
+        distanceTravelled += 10
+    else:
+        distanceTravelled += 20
+    time += 20
+
+if time &gt;= 1440:
+    time -= 1440  # time rolls back to 0 if we cross midnight
+
+
+# converts time, in minutes, back to HH:MM format.
+# note that (time-time%60) finds the largest whole number multiple of 60 in time
+# as time%60 is the remainder when time is divided by 60 (modulus function).
+
+arrivalHr = int((time - time%60)/60)
+arrivalMin = time%60
+
+# Note that we're storing the hour and minute in ints, which don't consider
+# leading zeros in the HH:MM format!
+# Therefore, when constructing the output we must check whether we need
+# to add a leading zero.
+
+output = ""
+if arrivalHr &lt; 10:
+    output += "0"
+output += str(arrivalHr)
+output += ":"
+if arrivalMin &lt; 10:
+    output += "0"
+output += str(arrivalMin)
+
+print(output)
+                    
+                    </pre>
+            </div>
+
+            <h4> Week 5 - Senior</h4>
+            <h5 class="lead">Jan 31, 2020</h5>
+            <br>
+            <p><a href = "javascript:void(0);"onclick="hideshow('week5sp')"> Problem</a></p>
+            <div class = "problem pb-4" id = "week5sp" >
+                
+                <p> Good luck :)</p>
+                <p>You want to determine the chances that your favourite team will be the champion of a small tournament.
+
+                    There are exactly four teams. At the end of the tournament, a total of six games will have been played with each team playing every other team exactly once. For each game, either one team wins (and the other loses), or the game ends in a tie. If the game does not end in a tie, the winning team is awarded three points and the losing team is awarded zero points. If the game ends in a tie, each team is awarded one point.
+                    
+                </p><p>Your favourite team will only be the champion if it ends the tournament with strictly more total points than every other team (i.e., a tie for first place is not good enough for your favourite team).
+                    
+                    The tournament is not over yet but you know the scores of every game that has already been played. 
+                </p><p>You want to consider all possible ways points could be awarded in the remaining games that have not yet been played and determine in how many of these cases your favourite team will be the tournament champion.</p>
+                <p><u>Input Specification</u></p>
+                <p>The first line of input will contain an integer 𝑇 which is your favourite team (1 ≤ 𝑇 ≤ 4). The second line will contain an integer 𝐺, the number of games already played (0 ≤ 𝐺 ≤ 5).</p>
+                <p> The next 𝐺 lines will give the results of games that have already been played. Each of these lines will consist of four integers 𝐴, 𝐵, 𝑆<sub>𝐴</sub>, 𝑆<sub>𝐵</sub> separated by single spaces where 1 ≤ 𝐴 &lt; 𝐵 ≤ 4, and 𝑆<sub>𝐴</sub>, 𝑆<sub>𝐵</sub> ≥ 0. This corresponds to a game between team 𝐴 (which had score 𝑆<sub>𝐴</sub>) and team 𝐵 (which had score 𝑆<sub>𝐵</sub>) where team 𝐴 won if 𝑆<sub>𝐴</sub> &gt; 𝑆<sub>𝐵</sub>, team 𝐵 won if 𝑆<sub>𝐴</sub> &lt; 𝑆<sub>𝐵</sub> and the game ended in a tie if 𝑆<sub>𝐴</sub> = 𝑆<sub>𝐵</sub>. The pairs 𝐴 and 𝐵 on the input lines are distinct, since no pair of teams plays twice.</p>
+                <p><u>Output Specification</u></p>
+                <p>The output will consist of a single integer which is the number of times that team 𝑇 is the champion over all possible awarding of points in the remaining games in the tournament.</p>
+                <p><u>Sample Input 1</u></p>
+                <pre>
+3
+3
+1 3 7 5
+3 4 0 8
+2 4 2 2
+                </pre>
+                <p><u>Sample Output 1</u></p>
+                <p class = "code">0<br> </p><br>
+                <p><u>Explanation of Sample Output 1</u></p>
+                <p>Team 3 has lost two of its three games, and team 4 has tied one and won one, which gives 4 points to team 4. Even if team 3 wins its final game, it cannot have more points than team 4, and thus, will not be champion.</p>
+                <p><u>Sample Input 2</u></p>
+                <pre>
+3
+4
+1 3 5 7
+3 4 8 0
+2 4 2 2
+1 2 5 5
+                </pre>
+                <p><u>Sample Output 2</u></p>
+                <p class = "code">9<br> </p><br>
+                <p><u>Explanation of Sample Output 2</u></p>
+                <p>After the following, we know Team 1 has 1 point, Team 2 has 2 points, Team 3 has 6 points and Team 4 has 1 point.</p>
+                <p>There are two remaining games (team 3 plays team 2; team 1 plays team 4). Teams 1, 2 or 4 cannot achieve 6 points, since even if they win their final games, their final point totals will be 4, 5 and 4 respectively. Thus, out of the 9 possible outcomes (2 matches with 3 different possible results per match), team 3 will be the champion in all 9 outcomes.                </p>
+                
+                <p><a href = "javascript:void(0);" onclick="hideshow('week5sh')"> Hint (Click to reveal)</a></p>
+                <div class = "problem" id = "week5sh"><p>This one's pretty hard... Think Recursion (DFS or DP). You might need to also find a way to store each possible state of a tournament, for example with a vector of length 6 to store whether each of the 6 possible games has occured yet, and what happened in that game. But there's many ways to do it. </p>
+                </div>
+
+            </div>
+            <p> Solution will be posted on Feb 7</p>
+            <!-----<p><a href = "javascript:void(0);"onclick="hideshow('week5ss')"> Solution</a></p>----->
+            <br>
+            <div class = "problem pb-4" id = "week5ss">
+                <p> This problem was the third question from the 2013 Senior CCC competition. You can visit that problem page on the CCC Grader to grade your own solution. </p>
+                <p> My C++ solution (Dynamic Programming) is shown below. A strong understanding of Dynamic Programming is recommended to understand this solution.</p>
+                <pre>
+#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+
+
+// We make a system to store the state of the tournament in a vector.
+// First number the 6 games 0, 1, 2, 3, 4 and 5.
+// Below shows which teams correspond to each game number.
+// For example, in game 0, team 1 plays team 2.
+//      0    1    2    3    4    5
+//      1-2  1-3  1-4  2-3  2-4  3-4
+// We use a integer vector of size 6 to store what has happened so far 
+// in each of the games. We use 0 to indicate that a game hasn't happened yet,
+// 1 to indicate that the first team won, 2 to indicate that the second team won,
+// and 3 to indicate a tie. 
+
+int t, g;
+
+// findA and findB are lookup functions that return the first and second teams
+// that played each game. 
+
+
+int findA(int a){
+    if(a == 0) return 1;
+    if(a == 1) return 1;
+    if(a == 2) return 1;
+    if(a == 3) return 2;
+    if(a == 4) return 2;
+    if(a == 5) return 3;
+
+}
+int findB(int a){
+    if(a == 0) return 2;
+    if(a == 1) return 3;
+    if(a == 2) return 4;
+    if(a == 3) return 3;
+    if(a == 4) return 4;
+    if(a == 5) return 4;
+}
+
+// function returns 1 if the favourite team won under the input configuration.
+
+int score(vector&lt;int&gt; games){
+    int teams[5] = {0, 0, 0, 0, 0};
+    for(int i = 0 ; i &lt; 6; i++){
+        int a = findA(i);
+        int b = findB(i);
+        if(games[i] == 1){
+            teams[a] += 3;
+        }
+        else if(games[i] == 2){
+            teams[a] += 0;
+            teams[b] += 3;
+        }
+        else if (games[i] == 3){
+            teams[b] += 1;
+            teams[a] += 1;
+        }
+    }
+    int myTeamScore = teams[t];
+    int tru = 1;
+    for(int i = 1; i &lt; 5; i++){
+        if(i != t and teams[i] &gt;= myTeamScore){
+            tru = 0;
+        }
+    }
+
+    return(tru);
+}
+
+// The main recursive function. Take the starting state of the tournament.
+// If all games have finished, see if the favourite team has won,
+// then return 1.
+// If not all games have finished, simulate all 3 possibilities of the game
+// by calling the recursive function with the new state of the tournament.
+// Return the sum of these three possibilities.
+
+int dp(vector&lt;int&gt; games){
+
+    int zeros = count(games.begin(), games.end(), 0);
+    if(zeros == 0){
+        int win = score(games);
+
+        return(win);
+    }
+    else{
+
+        int i = 0;
+        int nextGame = 0;
+        while(games[nextGame] != 0){
+            nextGame++;
+        }
+        games[nextGame] = 1;
+        int p1 = dp(games);
+        games[nextGame] = 2;
+        int p2 = dp(games);
+        games[nextGame] = 3;
+        int p3 = dp(games);
+
+        return(p1+p2+p3);
+    }
+}
+
+// Takes the inputs, converts the initial tournament state to the 
+// system used by the recursive function,
+// then call the recursive function.
+
+int main() {
+    cin &gt;&gt; t &gt;&gt; g;
+    int initGames [6] = {0, 0 , 0, 0, 0, 0};
+    int t1, t2, s1, s2;
+    for(int i = 0; i &lt; g; i++){
+        cin &gt;&gt; t1 &gt;&gt; t2 &gt;&gt; s1 &gt;&gt; s2;
+        int gameNum = 0;
+        if(t1 == 1){
+            if(t2 == 2) gameNum = 0;
+            if(t2 == 3) gameNum = 1;
+            if(t2 == 4) gameNum = 2;
+        }
+        else if(t1 == 2){
+            if(t2 == 3) gameNum = 3;
+            else gameNum = 4;
+        }
+        else gameNum = 5;
+        if(s1 &gt; s2) initGames[gameNum] = 1;
+        else if(s1 == s2) initGames[gameNum] = 3;
+        else initGames[gameNum] = 2;
+    }
+    vector&lt;int&gt; initGame;
+    for(int i = 0; i &lt; 6; i++){
+        initGame.push_back(initGames[i]);
+    }
+
+    cout &lt;&lt; dp(initGame) &lt;&lt; endl;
+}
+                </pre>
+            </div>
+
             <h4> Week 4 - Junior</h4>
             <h5 class="lead">Jan 24, 2020</h5>
             <br>
@@ -131,8 +433,7 @@
                
                 <hr>
             </div>
-            <p> Solution will be posted on Jan 31</p>
-            <!--<p><a href = "javascript:void(0);" onclick="hideshow('week4js')"> Solution</a></p>-->
+            <p><a href = "javascript:void(0);" onclick="hideshow('week4js')"> Solution</a></p>
             <br>
             <div class = "problem pb-4" id = "week4js">
                 <p> This problem was the fourth question from the 2013 Junior CCC competition. You can visit that question on the CCC Grader to grade your own solution.  </p>
@@ -194,11 +495,11 @@ print(choresFinished)
                 <p>The input tells us that 3 is taller than 8, 8 is taller than 4, and 4 is taller than 2. Therefore, 3 is taller than 2.</p>
 
             </div>
-            <p> Solution will be posted on Jan 31</p>
-            <!---<p><a href = "javascript:void(0);"onclick="hideshow('week4ss')"> Solution</a></p>----->
+            <p><a href = "javascript:void(0);"onclick="hideshow('week4ss')"> Solution</a></p>
             <br>
             <div class = "problem pb-4" id = "week4ss">
                 <p> This problem was the fourth question from the 2013 Senior CCC competition. You can visit that problem page on the CCC Grader to grade your own solution. </p>
+                <p> Consider the measurements as a directed graph, and for each measurement, an edge points from the taller student to the shorter student. We can run BFS or DFS on the graph, and if there exists a path from one student to another, than the first student is taller than the second. Then, we run BFS or DFS again but reversed to find if the first student is shorter. If none of these two cases result, then there's not enough information. </p> 
                 <p> My C++ solution (BFS) is shown below.</p>
                 <pre>
 #include &lt;iostream&gt;
