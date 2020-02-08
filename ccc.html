@@ -170,10 +170,10 @@ time = 60*h + m
 distanceTravelled = 0
 while distanceTravelled &lt; 120:
     if traffic(time):
-        distanceTravelled += 10
+        distanceTravelled += 5
     else:
-        distanceTravelled += 20
-    time += 20
+        distanceTravelled += 10
+    time += 10
 
 if time &gt;= 1440:
     time -= 1440  # time rolls back to 0 if we cross midnight
