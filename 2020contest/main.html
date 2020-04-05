@@ -25,6 +25,11 @@
             margin-left: 10%;
             margin-right: 10%
         }
+        textarea{
+            overflow: auto;
+            white-space: pre;
+            overflow-y:scroll;
+        }
     
     </style>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark " style = "background-color: #B10D23;">
@@ -86,7 +91,7 @@
             </div><br>
             <h4> Instructions</h4><br>
             <div>
-                <p> At 1:00PM (Eastern Daylight Time) on April 23, a link to the problem set and test data will be posted below.</p>
+                <p> At 1:00PM (Eastern Daylight Time) on April 23, a link to the problem set and test data will be posted below. <b>For the time being, an example problem is posted to allow participants to familiarize themselves with the contest format. Try following these instructions to solve the example problem and submit your answer for it, so you know what to do on the day of the contest.</b></p>
                 <p> The job is to solve the problems (using any method and coding language). Each problem will have multiple test cases following the input specification detailed within each problem. These test cases will be posted below and can be copied to clipboard using the provided button.  </p>
                 <p> The correct answer for each test case is an integer between 0 and 1000. You should run each test case through your program and produce the correct answer.  </p>
                 <p> There are also non-scored, example test cases similar to the scored ones with correct answers provided. They are provided so that you can test your program. </p>
@@ -120,44 +125,61 @@
         <div class="block pb-5">
 
             <hr class = "line1">
-            <h4 class=>2020 Official Problem Set </h4><br>
-            <p>Will be posted on 1PM EDT on April 23, 2020. Mark your calendar, and good luck! </p>
-			<!--<a href="http://ucccoders.github.io/2020contest/NOTE: ATTEMPTING TO CIRCUMVENT THE CONTEST SYSTEM WILL BE PUNISHED" target="_blank" class="btn btn-primary" > View Problems!</a>-->
-        
+            <h3>An example problem is currently posted below. </h3><br>
+            <h5>The problem is accompanied by test data and a submission form in the same format as the actual contest. </h5>
+            <h5>Please use the example problem to familiarize yourself with the contest format.</h5><br>
+            <h4>The below section will be replaced by the official contest on 1PM EDT on April 23, 2020. </h4>
+            <hr class = "line1">
+            <h4 class=>Example Problem </h4><br>
+            
+			<a href="http://ucccoders.github.io/2020contest/exampleproblem.pdf" target="_blank" class="btn btn-primary" > View Example Problem!</a>
+    
         
             <hr class = "line1">
-            <h4 class=>Test Data Provided Below. Click each problem to reveal. </h4><br>
+            <h4 class=>Test Data Provided Below. Click the problem to reveal. </h4><br>
             <p>Will be posted on 1PM EDT on April 23, 2020. Mark your calendar, and good luck!</p>
+
+            <p><a href = "javascript:void(0);"onclick="hideshow('p1e')"> Example Problem</a></p>
+            <div class = "problem pb-4" id = "p1e" >
+                
+                <p> Example Test Case </p>                <button onclick="copyText('p1c0')">Copy test data - example case</button>   <br><br>
+
+                <textarea rows="3.5" cols="50" readonly id="p1c0">
+266
+BBACFCACABAAACDABBFFDBDAFDDACBBCCBCDBBDDBCBAAACBABAAFFFCACABFFDCABDAABFBBBDFAAAADFDBAADCDAAAAFACFDCADDACACBDAAAAADDCFBCCABAFBAAFFAFBFFBDDFDACDCDFCCBAFCFDDAABCBADCACAFACFFCABAFFCDBDBBCDADFBBFCCBDDCFADAABCCADBAABDBACCDABBDBCAADBFDABFCCFADBDBACBDADFCFDDACAADDDADFABAABB
+
+</textarea><br><br><p>Expected answer: 76 </p>
+<hr>
+
+                <p>Scored Test Case 1</p>                <button onclick="copyText('p1c1')">Copy test data - scored case 1</button>   <br><br>
+
+                <textarea rows="3.5" cols="50" readonly id="p1c1">
+15
+BBACFCACABAAACD
+
+</textarea><br><br><hr>
+                <p>Scored Test Case 2</p>                <button onclick="copyText('p1c2')">Copy test data - scored case 2</button>   <br><br>
+
+                <textarea rows="3.5" cols="50" readonly id="p1c2">
+741
+BBACFCACABAAACDABBFFDBDAFDDACBBCCBCDBBDDBCBAAACBABAAFFFCACABFFDCABDAABFBBBDFAAAADFDBAADCDAAAAFACFDCADDACACBDAAAAADDCFBCCABAFBAAFFAFBFFBDDFDACDCDFCCBAFCFDDAABCBADCACAFACFFCABAFFCDBDBBCDADFBBFCCBDDCFADAABCCADBAABDBACCDABBDBCAADBFDABFCCFADBDBACBDADFCFDDACAADDDADFABAABBFFDDDDCCCDAACAFCFDCAFDCADBDBADACDAAFFCAACDFCDDACCAABCADDAAFFBADCDDDFAAFCBDCFDABCAFBDACACAFDDDBAABBBDDADDDDABCBACCADBDFADFBCFDCACFFCBCFBFAAABBFABCBDCAAABCAACADACCDCADDAAFCADCACDFAFAADBBAACADACCACADCCADADCAADCCDFAACBAFBBBAFCFCAFAAFAABCDDCABFDADAFCDAFBAFBBBAAFCCBAABBBAAFDAFFADBADBADACAFADCFAFDCFDACDCFFFBADCFDAFAAAAFFCDDCDBAAFBDBADCCDABDDDBDFBDAAFAADCBCCACCBAFAFBDDDCCDCADBAAADBAADFFACDABAACBAFACBCABFABFABBABDACFADCAADCFDBCBFABBABACFBCCFFAACBFABDAFDCFDABDABFCBBACFAADFDAAAADCA       
+
+</textarea><br><br><hr>
+                <p>Scored Test Case 3</p>                <button onclick="copyText('p1c3')">Copy test data - scored case 3</button>   <br><br>
+
+                <textarea rows="3.5" cols="50" readonly id="p1c3">
+994
+BBACFCACABAAACDABBFFDBDAFDDACBBCCBCDBBDDBCBAAACBABAAFFFCACABFFDCABDAABFBBBDFAAAADFDBAADCDAAAAFACFDCADDACACBDAAAAADDCFBCCABAFBAAFFAFBFFBDDFDACDCDFCCBAFCFDDAABCBADCACAFACFFCABAFFCDBDBBCDADFBBFCCBDDCFADAABCCADBAABDBACCDABBDBCAADBFDABFCCFADBDBACBDADFCFDDACAADDDADFABAABBFFDDDDCCCDAACAFCFDCAFDCADBDBADACDAAFFCAACDFCDDACCAABCADDAAFFBADCDDDFAAFCBDCFDABCAFBDACACAFDDDBAABBBDDADDDDABCBACCADBDFADFBCFDCACFFCBCFBFAAABBFABCBDCAAABCAACADACCDCADDAAFCADCACDFAFAADBBAACADACCACADCCADADCAADCCDFAACBAFBBBAFCFCAFAAFAABCDDCABFDADAFCDAFBAFBBBAAFCCBAABBBAAFDAFFADBADBADACAFADCFAFDCFDACDCFFFBADCFDAFAAAAFFCDDCDBAAFBDBADCCDABDDDBDFBDAAFAADCBCCACCBAFAFBDDDCCDCADBAAADBAADFFACDABAACBAFACBCABFABFABBABDACFADCAADCFDBCBFABBABACFBCCFFAACBFABDAFDCFDABDABFCBBACFAADFDAAAADCAFABAFFCFDDBDCAFABACFACBDDCCBADACAACBCFFAFFAAAADDADADCADBBACDDACADFFDBDAADCCDACFFFCFAADDFADFFDCABDBDDDCABCFFBAAFFABAACADABBDAAAAFABDFABCAFBFCDDDAFDBBCADBCDDFCBBCCABCAAACFFBAABCDDCACAADAACBFDAAAFCFBFAFAAAACFACADDAACABAAFFAABFCBDFAFDAFAFABBAAFFDBCFFCDDBACB
+
+</textarea><br>
+
+            </div>
 
             <hr class = "line1">
             <h4 class=>Please submit your contest using the Google Form below. </h4><br>
-            <p>Will be posted on 1PM EDT on April 23, 2020. Mark your calendar, and good luck!</p>
+            <a href="https://forms.gle/vW3NnD8ex7nTbrvaA" target="_blank" class="btn btn-primary" > Sumbit Your Answer!</a>
 
-            <!--<p><a href = "javascript:void(0);"onclick="hideshow('p1')"> Problem 1</a></p>
-            <div class = "problem pb-4" id = "p1" >
-                
-                
-
-                <p>P1 - Test Case 1</p>                <button onclick="copyText('p1c1')">Copy test data - case 1</button>   <br><br>
-
-                <textarea rows="3.5" cols="50" readonly id="p1c1">
-1 10
-PLEASE DO NOT ATTEMPT TO CIRCUMVENT THE SYSTEM
-</textarea><br><br><hr>
-                <p>P1 - Test Case 2</p>                <button onclick="copyText('p1c2')">Copy test data - case 2</button>   <br><br>
-
-                <textarea rows="3.5" cols="50" readonly id="p1c2">
-Nice try! You're not getting the test data yet.
-
-</textarea><br><br><hr>
-                <p>P1 - Test Case 3</p>                <button onclick="copyText('p1c3')">Copy test data - case 3</button>   <br><br>
-
-                <textarea rows="3.5" cols="50" readonly id="p1c3">
-STOP CHEATING NOW PLS
-</textarea><br>
--->
-
-            </div>
+        
             
         </div>
     </div>
