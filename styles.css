@@ -251,11 +251,14 @@ height: 100%;
 }
 
 .profilecard{
-  margin-left: 4%; 
-  margin-right: 4%;
+
   border-width: 0px;
   text-align: center;
   margin-top: 5%
+}
+
+.card-body{
+  
 }
 
 
@@ -334,15 +337,10 @@ height: 100%;
 
 .avatar-img{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  max-width: 190px!important;
+  max-width: 68%;
 }
 
-@media (min-width: 576px){
-  .avatar-img{max-width: 210px!important}
+@media (max-width: 576px){
+  .avatar-img{max-width: 90%;}
 }
-@media (min-width: 400px){
-  .avatar-img{max-width: 180px!important}
-}
-@media (min-width: 250px){
-  .avatar-img{max-width: 160px!important}
-}
+
