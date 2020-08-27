@@ -7,6 +7,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascript.js"></script>
+
+
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,45 +19,13 @@
 <body>
 
   
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark " style = "background-color: #B10D23;">
-		<a class="navbar-brand code " href = "index.html"><b>UCC_Coders();</b></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-		  <span class="navbar-toggler-icon"></span>
-		</button>  
-		<div class="collapse navbar-collapse" id="navbarNavDropdown">
-		  <ul class="navbar-nav ml-auto">
-			<li class="nav-item">
-			  <a class="nav-link nav-disappear" href="index.html">Home </a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link nav-disappear" href="2020contest/main.html">2020 Contest </a>
-			  </li>
-			<li class="nav-item">
-				<a class="nav-link nav-disappear" href="ccc.html">CCC Prep</a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link nav-disappear" href="projects.html">Projects</a>
-			</li>
-
-			<li class="nav-item">
-				<a class="nav-link nav-disappear" href="index.html#meetings">Meetings</a>
-			 </li>
-
-			<li class="nav-item nav-disappear">
-				<a class="nav-link" href="index.html#annuals">Events</a>
-			</li>
-
-			<li class="nav-item nav-disappear">
-				<a class="nav-link" href="index.html#sections">Sections</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link nav-disappear" href="index.html#team">Team</a>
-			</li>
-			
-		  </ul>
-		  
-		</div>
-	</nav>
+    <div id="nav-placeholder">
+	</div>
+	<script>
+		$(function(){
+		$("#nav-placeholder").load("navigation.html");
+		});
+	</script>
 
 	<div class = "content" style = "padding-top: 27px;">
 
@@ -65,319 +37,111 @@
                 <a href = "index.html#projects">&lt&lt &nbspBack to Main Page</a>
             </p>
             <hr class = "my-4">
-
             
             <div class="container">
-                <div class="row pb-5 mb-4">
+                <div class="row pb-5 mb-4" id = "project-list">
+                    <script>
+                        
+                        renderProj("Virtual Meetings during COVID-19",
+                        "Mar - May 2020", 
+                        "During this diffcult time of the COVID-19 pandemic, our club has moved meetings online in order to keep the coding community engaged.", 
+                        "virtualmtg.png")
+                        renderProj("Quarantine Game Jam",
+                        "by Nima Bidari and William Trojniak, May 2020", 
+                        "Will and Nima participated in this Game Jam, where they coded a game titled Scrappy over just one weekend!", 
+                        "gamejam.png")
+                        renderProj("Automatic Contest Grader",
+                        "by William Trojniak, May 2020", 
+                        "Will has been experimenting with an automatic grader on which users can submit their code for grading against coding problems.", 
+                        "grader.png")
+                        renderProj("UCC Convergence Website",
+                        "by Kevin Liu, Apr 2020", 
+                        "The digital version of Convergence (School Newspaper) is now being maintained and updated by Kevin. View the website ",
+                        "convergence.png",
+                        1, "http://convergence.today", "here!")
+                        renderProj("UCC Coding Competition",
+                        "Apr 23, 2020", 
+                        "Our club hosted the First Annual UCC Coding Competition! Details and results are available on the contest website ", 
+                        "ucccc.png",
+                        1, "2020contest/main.html", "here!")
+                        renderProj("UCC Amnesty Website",
+                        "by Joshua Li, Apr 2020", 
+                        "Joshua created this website for the UCC Amnesty International club to reach a wider audience with their human rights publications. ", 
+                        "amnesty.png", 1, "amnestyucc.com", "Available here!")
+                        renderProj("DiaMonde Diamond Tracker",
+                        "by Jefferson Ding & Samantha Shulman (BSS), Mar 2020", 
+                        "DiaMonde, based on the Ethereum blockchain, solves a major problem in the diamond industry by making each diamond's history transparent.", 
+                        "diamonde.png")
+                        renderProj("InterGen - Service for Seniors",
+                        "by Robbie Evans, Mar 2020", 
+                        "InterGen is a dynamic web platform that connects seniors in hospitals and senior homes, alone and lacking interaction, with high school volunteers. ", 
+                        "robbieintergen.png")
+                        renderProj("Password Generator & Manager",
+                        "by Jefferson Ding, Feb 2020", 
+                        "This Python/TKinter tool generates secure, 1024-bit RSA encrypted passwords and stores them securely on the local machine.", 
+                        "password.png")
+                        renderProj("TileVania",
+                        "by William Trojniak, Jan 2020", 
+                        "A fun adventure game, built using Unity, where the protagonist skillfully navigates their way through countless obstacles, traps, enemies and hazards.", 
+                        "tilevania.png")
+                        renderProj("TaskList w/ Firebase",
+                        "by Leo Zhang, Jan 2020", 
+                        "This is an online workflow manager allowing you to create and maintain task lists. Tasks are stored by Google Account using Firebase to authenticate.", 
+                        "tasklist.png")
+                        renderProj("Highway Traffic Simulator",
+                        "by Kevin Liu, Dec 2019", 
+                        "Using C++, Kevin coded a simplistic highway traffic simulator. A highway is divided into blocks and traffic flow between blocks is calculated.", 
+                        "highwaysim.png")
+                        renderProj("Rule 30 & Game of Life",
+                        "Club activity, Dec 2019", 
+                        "Club members, led by Mr. Miskew, looked at the Rule 30 pattern and Conway's Game of Life and examined an algorithm to graphically generate Rule 30.", 
+                        "rule30.png")
+                        renderProj("Nyxium - Cryptocurrency",
+                        "by Kevin Liu, Nov 2019", 
+                        "Using Python 3, Kevin built a simple cryptocurrency with a functional blockchain, proof of work (mining) algorithm, and client GUI. ", 
+                        "nyxium.png")
+                        renderProj("UCC Textbook Exchange",
+                        "by Ibrahim Fadel, Nov 2019", 
+                        "This is a website to help UCC students buy and sell their textbooks easily. With this website there will be no more struggle to get rid of used books!", 
+                        "textbook.jpg")
+                        renderProj("Game - Memoir",
+                        "by Jayson Tian, 2019", 
+                        "He wakes up in a mysterious mansion with hidden rooms and terrifying basements. Through the mansion holds secrets, terror, lies, and something of vital importance...", 
+                        "memoir.png")
+                        renderProj("Javascript Games",
+                        "by Will Trojniak, Nov 2019", 
+                        "Will is working with the club to build a few interactive games such as Snake and Brickbreaker, using Javascript.", 
+                        "jsgames.png")
+                        renderProj("Experimenting w/ Firebase",
+                        "Will T. and Oliver T., Nov 2019", 
+                        "Club members are experimenting with using Google Firebase's tools to manage databases and authentication for websites and apps. ", 
+                        "firebase.png")
+                        renderProj("Camera Facial Recognition",
+                        "by Nima Bidari, Nov 2019", 
+                        "This is a club project led by Nima to detect faces in the hallway using an AI-enabled camera. This will be done using a Raspberry-pi coded in Python calling the Clarifai Predict API.", 
+                        "aicamera.png")
+                        renderProj("Sidewalk Labs Tour",
+                        "Nov 5, 2019", 
+                        "Club members went to the Sidewalk Labs office at the Toronto waterfront to learn more about the design of smart cities.", 
+                        "sidewalk.JPG")
+                        renderProj("Machine Learning Conference",
+                        "Oct 24, 2019", 
+                        "Some members of the club will be attending the Machine Learning and the Market for Intelligence Conference, hosted by the Creative Destruction Lab at the University of Toronto.", 
+                        "machinelearning.jpg")
+                        renderProj("picoCTF CanHack 2019",
+                        "Sept 27 - Oct 11, 2019", 
+                        "Members of the club participated in the picoCTF CanHack, a computer security competition hosted by Carnegie Mellon University.", 
+                        "picoCTF.png")
+                        renderProj("Biodiversity Data Processing",
+                        "by Kevin, Will and Nima, Sep 2019", 
+                        "We independently created our own programs using C++ or Python to facilitate processing iNaturalist data for a Y10 Biology Investigation regarding Biodiversity in Toronto.", 
+                        "biodiversity.png")
+                        renderProj("The Odyssey Interactive Game",
+                        "by Kevin Liu, 2018", 
+                        "This is an app built using Python and the Tkinter module, designed to allow Y9 English students to test their knowledge about The Odyssey.", 
+                        "virtualmtg.png")
+                    </script>
                     
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="card shadow" style = " margin: auto">
-                        <img class="card-img-top" src="Projects Media/virtualmtg.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Virtual Meetings during COVID-19 </h5>
-                            <h6 > Mar - May 2020 </h6>
-                            <p class="card-text"> During this diffcult time of the COVID-19 pandemic, our club has moved meetings online in order to keep the coding community engaged. </p>
-                            <p>  </p>
-                        </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="card shadow" style = " margin: auto">
-                        <img class="card-img-top" src="Projects Media/gamejam.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Quarantine Game Jam</h5>
-                            <h6 > by Nima Bidari and William Trojniak, May 2020 </h6>
-                            <p class="card-text">Will and Nima have participated in this Game Jam, where they coded a game titled Scrappy over just one weekend!</p>
-                            <p>  </p>
-                        </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="card shadow" style = " margin: auto">
-                        <img class="card-img-top" src="Projects Media/grader.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Automatic Contest Grader</h5>
-                            <h6 > by William Trojniak, May 2020 </h6>
-                            <p class="card-text">Will has been experimenting with an automatic grader on which users can submit their code for grading against coding problems. </p>
-                            <p>  </p>
-                        </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="card shadow" style = " margin: auto">
-                        <img class="card-img-top" src="Projects Media/convergence.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">UCC Convergence Website</h5>
-                            <h6 > by Kevin Liu, Apr 2020 </h6>
-                            <p class="card-text">The digital version of Convergence (School Newspaper) is now being maintained by Kevin. View the website <a href = "http://www.convergence.today">Here!</a> </p>
-                            <p>  </p>
-                        </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="card shadow" style = " margin: auto">
-                        <img class="card-img-top" src="Projects Media/ucccc.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">UCC Coding Competition</h5>
-                            <h6 > Apr 23, 2020 </h6>
-                            <p class="card-text">Our club hosted the First Annual UCC Coding Competition! Details and results are available on the contest website <a href = "2020contest/main.html">here!</a> </p>
-                            <p>  </p>
-                            
-                        </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="card shadow" style = " margin: auto">
-                        <img class="card-img-top" src="Projects Media/amnesty.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">UCC Amnesty Website</h5>
-                            <h6 > by Joshua Li, Apr 2020 </h6>
-                            <p class="card-text">Joshua created this website for the UCC Amnesty International club to reach a wider audience with their human rights publications. <a href = "http://www.amnestyucc.com">Available here!</a> </p>
-                            <p>  </p>
-                            
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="card shadow" style = " margin: auto">
-                        <img class="card-img-top" src="Projects Media/diamonde.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">DiaMonde Diamond Tracker</h5>
-                            <h6 > by Jefferson Ding & Samantha Shulman (BSS), Mar 2020 </h6>
-                            <p class="card-text">DiaMonde, based on the Ethereum blockchain, solves a major problem in the diamond industry by making each diamond's history transparent. </p>
-                            <p>  </p>
-                            
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="card shadow" style = " margin: auto">
-                        <img class="card-img-top" src="Projects Media/robbieintergen.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">InterGen - Service for Seniors</h5>
-                            <h6 > by Robbie Evans, Mar 2020 </h6>
-                            <p class="card-text">InterGen is a dynamic web platform that connects seniors in hospitals and senior homes, alone and lacking interaction, with high school volunteers.   </p>
-                            <p>  </p>
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="card shadow" style = " margin: auto">
-                        <img class="card-img-top" src="Projects Media/password.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Password Generator & Manager</h5>
-                            <h6 > by Jefferson Ding, Feb 2020 </h6>
-                            <p class="card-text">This Python/TKinter tool generates secure, 1024-bit RSA encrypted passwords and stores them securely on the local machine. </p>
-                            <p>  </p>
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="card shadow" style = " margin: auto">
-                        <img class="card-img-top" src="Projects Media/tilevania.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">TileVania</h5>
-                            <h6 > by William Trojniak, Jan 2020 </h6>
-                            <p class="card-text">A fun adventure game, built using Unity, where the protagonist skillfully navigates their way through countless obstacles, traps, enemies and hazards.  </p>
-                            <p>  </p>
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="card shadow" style = " margin: auto">
-                        <img class="card-img-top" src="Projects Media/tasklist.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">TaskList w/ Firebase</h5>
-                            <h6 > by Leo Zhang, Jan 2020 </h6>
-                            <p class="card-text">This is an online workflow manager allowing you to create and maintain task lists. Tasks are stored by Google Account using Firebase to authenticate. </p>
-                            <p>  </p>
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="card shadow" style = " margin: auto">
-                        <img class="card-img-top" src="Projects Media/highwaysim.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Highway Traffic Simulator</h5>
-                            <h6 > by Kevin Liu, Dec 2019 </h6>
-                            <p class="card-text">Using C++, Kevin coded a simplistic highway traffic simulator. A highway is divided into blocks and traffic flow between blocks is calculated. </p>
-                            <p>  </p>
-                        </div>
-                        </div>
-                     </div>
-
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="card shadow" style = " margin: auto">
-                        <img class="card-img-top" src="Projects Media/rule30.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Rule 30 & Game of Life</h5>
-                            <h6 > Club activity, Dec 2019 </h6>
-                            
-
-                            <p class="card-text">Club members, led by Mr. Miskew, looked at the Rule 30 pattern and Conway's Game of Life and examined an algorithm to graphically generate Rule 30. </p>
-                            <p>  </p>
-                            
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="card shadow" style = " margin: auto">
-                        <img class="card-img-top" src="Projects Media/nyxium.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Nyxium - Cryptocurrency</h5>
-                            <h6 > by Kevin Liu, Nov 2019 </h6>
-                            <p class="card-text">Using Python 3, Kevin built a simple cryptocurrency with a functional blockchain, proof of work (mining) algorithm, and client GUI.  </p>
-                            <p>  </p>
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="card shadow" style = " margin: auto">
-                        <img class="card-img-top" src="Projects Media/textbook.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">UCC Textbook Exchange</h5>
-                            <h6 > by Ibrahim Fadel, Nov 2019 </h6>
-                            <p class="card-text">This is a website to help UCC students buy and sell their textbooks easily. With this website there will be no more struggle to get rid of used books!</p>
-                            <p>  </p>
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                            <div class="card shadow" style = " margin: auto">
-                            <img class="card-img-top" src="Projects Media/memoir.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Game - Memoir</h5>
-                                <h6 > by Jayson Tian, 2019 </h6>
-                                
-
-                                <p class="card-text"> He wakes up in a mysterious mansion with hidden rooms and terrifying basements. Through the mansion holds secrets, terror, lies, and something of vital importance... </p>
-                                <p>  </p>
-                                
-                            </div>
-                            </div>
-                    </div>
-
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="card shadow" style = "margin: auto">
-                            <img class="card-img-top" src="Projects Media/jsgames.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Javascript Games</h5>
-                                <h6 > by Will Trojniak, Nov 2019 </h6> 
-                                <p class="card-text">Will is working with the club to build a few interactive games such as Snake and Brickbreaker, using Javascript. </p>
-
-                                
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="card shadow" style = " margin: auto">
-                        <img class="card-img-top" src="Projects Media/firebase.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Experimenting w/ Firebase</h5>
-                            <h6 > Will T. and Oliver T., Nov 2019  </h6>
-                            
-
-                            <p class="card-text">Club members are experimenting with using Google Firebase's tools to manage databases and authentication for websites and apps.  </p>
-                            <p>  </p>
-                            
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="card shadow" style = " margin: auto">
-                        <img class="card-img-top" src="Projects Media/aicamera.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Camera Facial Recognition</h5>
-                            <h6 > by Nima Bidari, Nov 2019 </h6>
-                            <p class="card-text">This is a club project led by Nima to detect faces in the hallway using an AI-enabled camera. This will be done using a Raspberry-pi coded in Python calling the Clarifai Predict API. </p>
-                            <p>  </p>
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                            <div class="card shadow" style = " margin: auto">
-                            <img class="card-img-top" src="Projects Media/sidewalk.JPG" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Sidewalk Labs Tour</h5>
-                                <h6 > Nov 5, 2019 </h6>
-                                
-
-                                <p class="card-text">Club members went to the Sidewalk Labs office at the Toronto waterfront to learn more about the design of smart cities.  </p>
-                                <p>  </p>
-                                
-                            </div>
-                            </div>
-                        </div>
-
-
-
-
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="card shadow" style = "margin: auto">
-                            <img class="card-img-top" src="Projects Media/machinelearning.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Machine Learning Conference</h5>
-                                <h6> Oct 24, 2019 </h6>
-                                <p class="card-text">Some members of the club will be attending the Machine Learning and the Market for Intelligence Conference, hosted by the Creative Destruction Lab at the University of Toronto. </p>
-                                
-                            </div>
-                            </div>
-                    </div>
-                    
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="card shadow" style = "margin: auto">
-                            <img class="card-img-top" src="Projects Media/picoCTF.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">picoCTF CanHack</h5>
-                                <h6> Sept 27 - Oct 11, 2019 </h6> 
-                                <p class="card-text">Members of the club participated in the picoCTF CanHack, a computer security competition hosted by Carnegie Mellon University. </p>
-                                
-                            </div>
-                            </div>
-                    </div>
-                    
-                    
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="card shadow" style = "margin: auto">
-                            <img class="card-img-top" src="Projects Media/biodiversity.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Biodiversity Data Processing</h5>
-                                <h6> by Kevin, Will and Nima, Sep 2019 </h6> 
-                                <p class="card-text">We independently created our own programs using C++ or Python to facilitate processing iNaturalist data for a Y10 Biology Investigation regarding Biodiversity in Toronto.  </p>
-                                
-                            </div>
-                            </div>
-                    </div>
-                    <div class="col col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="card shadow" style = "margin: auto">
-                            <img class="card-img-top" src="Projects Media/odyssey.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">The Odyssey Interactive Game</h5>
-                                <h6 > by Kevin Liu, 2018 </h6> 
-                                <p class="card-text">This is an app built using Python and the Tkinter module, designed to allow Y9 English students to test their knowledge about Homer's Epic <i>The Odyssey</i>.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                
                 </div>
             </div>
         <hr class="my-4">
@@ -396,10 +160,8 @@
 
 	  
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="javascript.js"></script>
 
 </body>
 </html>

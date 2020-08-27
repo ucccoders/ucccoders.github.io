@@ -12,53 +12,21 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://kit.fontawesome.com/ac8f745405.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="javascript.js"></script>
 
-
-
+	
 	
 </head>
 <body>
-
-	<nav class="navbar fixed-top navbar-expand-lg navbar-dark " style = "background-color: #B10D23;">
-		<a class="navbar-brand code " href = "index.html"><b>UCC_Coders();</b></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-		  <span class="navbar-toggler-icon"></span>
-		</button>  
-		<div class="collapse navbar-collapse" id="navbarNavDropdown">
-		  <ul class="navbar-nav ml-auto">
-			<li class="nav-item">
-			  <a class="nav-link nav-disappear" href="index.html">Home </a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link nav-disappear" href="2020contest/main.html">2020 Contest </a>
-			  </li>
-			<li class="nav-item">
-				<a class="nav-link nav-disappear" href="ccc.html">CCC Prep</a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link nav-disappear" href="projects.html">Projects</a>
-			</li>
-
-			<li class="nav-item">
-				<a class="nav-link nav-disappear" href="index.html#meetings">Meetings</a>
-			 </li>
-
-			<li class="nav-item nav-disappear">
-				<a class="nav-link" href="index.html#annuals">Events</a>
-			</li>
-
-			<li class="nav-item nav-disappear">
-				<a class="nav-link" href="index.html#sections">Sections</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link nav-disappear" href="index.html#team">Team</a>
-			</li>
-			
-		  </ul>
-		  
-		</div>
-	</nav>
+	<div id="nav-placeholder">
+	</div>
+	<script>
+		$(function(){
+		$("#nav-placeholder").load("navigation.html");
+		});
+	</script>
+	
 	<div class = "content">	
 		<div class="block" style = "margin-bottom: 0px; padding-top: 27px; padding-bottom: 1.5%; ">
 			<h1 >UCC Coding and Algorithms Academy</h1>
@@ -137,7 +105,7 @@
 			
 				<div class = "row nomargin " style=	 "margin-top: 2%">
 					<div class = "margins  blacksec col col-6" >
-						<h4> Club Meeting</h4>
+						<h4> Club Meetings</h4>
 						<h5 class="lead">Thursday, 1:30pm </h5>
 						<p> Due to COVID-19, meetings will be held online through Google Meet for the time being. 
 							<!--<a href = "index.html#meetings">More Info Here. </a>--></p>
@@ -185,81 +153,36 @@
 				<br>
 			
 				<div class="container">
-					<div class="row">
-
-						<div class="col col-12 col-sm-6 col-lg-4 mb-4">
-							<div class="card shadow" style = " margin: auto">
-							<img class="card-img-top" src="Projects Media/virtualmtg.png" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">Virtual Meetings during COVID-19 </h5>
-								<h6 > Mar - May 2020 </h6>
-								<p class="card-text"> During this diffcult time of the COVID-19 pandemic, our club has moved meetings online in order to keep the coding community engaged. </p>
-								<p>  </p>
-							</div>
-							</div>
-						</div>
+					<div class="row" id = "index-project-list">
+						<script>
+							renderProjOnIndex("Virtual Meetings during COVID-19",
+							 "Mar - May 2020", 
+							 "During this diffcult time of the COVID-19 pandemic, our club has moved meetings online in order to keep the coding community engaged.", 
+							 "virtualmtg.png")
+							renderProjOnIndex("Quarantine Game Jam",
+							"by Nima Bidari and William Trojniak, May 2020", 
+							"Will and Nima participated in this Game Jam, where they coded a game titled Scrappy over just one weekend!", 
+							"gamejam.png")
+							renderProjOnIndex("Automatic Contest Grader",
+							"by William Trojniak, May 2020", 
+							"Will has been experimenting with an automatic grader on which users can submit their code for grading against coding problems.", 
+							"grader.png")
+							renderProjOnIndex("UCC Convergence Website",
+							"by Kevin Liu, Apr 2020", 
+							"The digital version of Convergence (School Newspaper) is now being maintained and updated by Kevin. View the website ",
+							"convergence.png",
+							1, "http://convergence.today", "here!")
+							renderProjOnIndex("UCC Coding Competition",
+							"Apr 23, 2020", 
+							"Our club hosted the First Annual UCC Coding Competition! Details and results are available on the contest website ", 
+							"ucccc.png",
+							1, "2020contest/main.html", "here!")
+							renderProjOnIndex("UCC Amnesty Website",
+							"by Joshua Li, Apr 2020", 
+							"Joshua created this website for the UCC Amnesty International club to reach a wider audience with their human rights publications. ", 
+							"amnesty.png", 1, "amnestyucc.com", "Available here!")
+						</script>
 						
-						<div class="col col-12 col-sm-6 col-lg-4 mb-4">
-							<div class="card shadow" style = " margin: auto">
-							<img class="card-img-top" src="Projects Media/gamejam.png" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">Quarantine Game Jam</h5>
-								<h6 > by Nima Bidari and William Trojniak, May 2020 </h6>
-								<p class="card-text">Will and Nima have participated in this Game Jam, where they coded a game titled Scrappy over just one weekend!</p>
-								<p>  </p>
-							</div>
-							</div>
-						</div>
-						
-						<div class="col col-12 col-sm-6 col-lg-4 mb-4">
-							<div class="card shadow" style = " margin: auto">
-							<img class="card-img-top" src="Projects Media/grader.png" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">Automatic Contest Grader</h5>
-								<h6 > by William Trojniak, May 2020 </h6>
-								<p class="card-text">Will has been experimenting with an automatic grader on which users can submit their code for grading against coding problems. </p>
-								<p>  </p>
-							</div>
-							</div>
-						</div>
-						
-						<div class="col col-12 col-sm-6 col-lg-4 mb-4">
-							<div class="card shadow" style = " margin: auto">
-							<img class="card-img-top" src="Projects Media/convergence.png" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">UCC Convergence Website</h5>
-								<h6 > by Kevin Liu, Apr 2020 </h6>
-								<p class="card-text">The digital version of Convergence (School Newspaper) is now being maintained by Kevin. View the website <a href = "http://www.convergence.today">Here!</a> </p>
-								<p>  </p>
-							</div>
-							</div>
-						</div>
-						
-						<div class="col col-12 col-sm-6 col-lg-4 mb-4">
-							<div class="card shadow" style = " margin: auto">
-							<img class="card-img-top" src="Projects Media/ucccc.png" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">UCC Coding Competition</h5>
-								<h6 > Apr 23, 2020 </h6>
-								<p class="card-text">Our club hosted the First Annual UCC Coding Competition! Details and results are available on the contest website <a href = "2020contest/main.html">here!</a> </p>
-								<p>  </p>
-								
-							</div>
-							</div>
-						</div>
-						
-						<div class="col col-12 col-sm-6 col-lg-4 mb-4">
-							<div class="card shadow" style = " margin: auto">
-							<img class="card-img-top" src="Projects Media/amnesty.png" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">UCC Amnesty Website</h5>
-								<h6 > by Joshua Li, Apr 2020 </h6>
-								<p class="card-text">Joshua created this website for the UCC Amnesty International club to reach a wider audience with their human rights publications. <a href = "http://www.amnestyucc.com">Available here!</a> </p>
-								<p>  </p>
-								
-							</div>
-							</div>
-						</div>
 
 						
 					
@@ -500,8 +423,6 @@
 
 
 	  
-	<script src="javascript.js"></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
