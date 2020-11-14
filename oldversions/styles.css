@@ -1,0 +1,346 @@
+body {
+    
+  font-size: 0.9rem;
+  -webkit-text-size-adjust: unset;
+  margin: 0;
+  padding: 0;
+  color: #333!important;
+
+}
+
+textarea  
+{  
+   font-family:"Courier", serif;  
+   font-size: 1rem;   
+}
+
+
+
+/*
+####################################################
+FONT SIZES MASTER CONTROL!!!!!!!
+####################################################
+*/ 
+
+
+/* Tiny devices (phones and smartwatches, 1px and up) */
+
+@media (min-width: 1px) {  
+html {font-size: 0.4rem;}
+html p, .media, pre {font-size: 1.7rem!important;}
+h6 {font-size: 1.5rem!important;}
+html h5, html h5 .lead {font-size: 1.8rem!important;}
+.teamname {font-size: 1.7rem !important}
+html h4, html h4 .card-title {font-size: 2.15rem!important;}
+html h3 {font-size: 2.4rem!important;}
+
+
+
+
+}
+/* Small devices (phones, 200px and up) */
+
+@media (min-width: 200px) {  
+html {font-size: 0.5rem;}
+html p, .media, pre  {font-size: 1.65rem!important;}
+h6 {font-size: 1.5rem!important;}
+html h5, html h5 .lead {font-size: 1.8rem!important;}
+html h4, html h4 .card-title {font-size: 2.0rem!important;}
+html h3 {font-size: 2.3rem!important;}
+
+
+
+}
+/* Small-Medium devices (phones and tablets, 510px and up) */
+
+@media (min-width: 510px) {  
+html {font-size: 0.63rem;}
+html p, .media, h6, pre {font-size: 1.52rem!important;}
+html h5, html h5 .lead, .teamname {font-size: 1.65rem!important;}
+html h4, html h4 .card-title {font-size: 1.9rem!important;}
+html h3 {font-size: 2.2rem!important;}
+
+
+
+
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  
+html {font-size: 0.75rem;}
+html p, .media, h6, pre {font-size: 1.30rem!important;}
+html h5, html h5 .lead, .teamname {font-size: 1.3rem!important;}
+html h4, html h4 .card-title {font-size: 1.8rem!important;}
+html h3 {font-size: 2.1rem!important;}
+
+
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+html {font-size: 0.875rem;}
+html p, h6, pre {font-size: 1.101rem!important;}
+html h5, html h5 .lead, .teamname {font-size: 1.26rem!important;}
+.media {font-size: 1.133rem!important;}
+html h4, html h4 .card-title {font-size: 1.66rem!important;}
+html h3 {font-size: 2rem!important;}
+
+
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+html {font-size: 0.95rem;}
+html p, h6, pre {font-size: 1.1rem!important;}
+html h5, html h5 .lead, .media, .teamname {font-size: 1.26rem!important;}
+html h4, html h4 .card-title {font-size: 1.54rem!important;}
+html h3 {font-size: 1.869rem!important;}
+html h1 {font-size: 2.8rem!important;}
+
+
+
+
+
+}
+
+
+/********************************************************/
+
+
+.anchor {
+  display: block;
+  height: 50px;
+  margin-top: -50px;
+  visibility: hidden;
+  z-index: -1000;
+}
+
+.content{
+margin-top: 3.8%;
+
+}
+
+.block{
+background-color: #FFF;
+padding-left: 7%;
+padding-right: 7%;
+padding-top: 0.3%;
+padding-bottom: 0.6%;
+
+}
+
+.code{
+  font-family: 'Inconsolata', monospace;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.col{
+margin-top: 1.3%
+}
+
+ .nomargintop{
+margin-top: 0.5%;
+}
+
+
+.nav-item{
+margin-right: 10px;
+}
+
+
+
+.card{
+height: 100%;
+}
+
+.margins{
+  padding-left: 3%; padding-right: 3%
+}
+
+
+
+.innermargin{
+  padding-left: 4%; padding-right: 4%
+}
+
+.nomargin{
+  margin: 0;
+}
+
+.blacksec{
+  
+  padding-top: 2.5%;
+  padding-bottom: 3%;
+  background-color: #333;
+  color: #eee;
+  margin: 0;
+}
+
+.whitesec{
+  
+  padding-top: 2.5%;
+  padding-bottom: 3%;
+  background-color: #ececec;
+
+  margin: 0;
+}
+
+
+
+@media (min-width: 1px){
+  .carousel-caption {margin-bottom: 0%; padding-bottom: 0px;}
+  .smalll {font-size: 0% !important}
+  .bigg {font-size: 300% !important}
+}
+@media (min-width: 250px){
+  .carousel-caption {margin-bottom: 0%; padding-bottom: 5%;}
+  .smalll {font-size: 150% !important}
+  .bigg {font-size: 300% !important}
+}
+
+@media (min-width: 400px){
+  .carousel-caption {margin-bottom: 4%; padding-bottom: 6%}
+  .smalll {font-size: 180% !important}
+  .bigg {font-size: 400% !important}
+
+
+}
+@media (min-width: 600px){
+  .carousel-caption {margin-bottom: 7%; padding-bottom: 4.8%}
+  .smalll {font-size: 200% !important}
+  .bigg {font-size: 550% !important}
+
+
+}
+@media (min-width: 800px){
+  .carousel-caption {margin-bottom: 9.5%; padding-bottom: 3.5%}
+}
+
+
+.fade1{
+  filter: brightness(76%)
+}
+.line1{
+  border:0;
+  
+  margin:0;
+  width:100%;
+  height:2px !important;
+  background:#B10D23;
+  margin-top: 1.6%;
+  margin-bottom: 1.6%;
+}
+
+.line1-light{
+  height: 1px;
+  background:#888;
+}
+
+ .media {
+  font-size: 1.3rem;
+  
+}
+
+.rounded{
+  border-radius: 100%!important;
+  
+}
+
+.profilecard{
+
+  border-width: 0px;
+  text-align: center;
+  margin-top: 5%
+}
+
+.card-body{
+  
+}
+
+
+
+
+.navbar-brand{
+  color: #FFF!important
+}
+
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.15rem;
+}
+
+@media (min-width: 1px){
+  .navbar-dark .navbar-nav .nav-link, .dropdown-item {font-size: 1.7rem !important}
+  .navbar-dark .navbar-brand {font-size: 1.8rem!important}
+}
+@media (min-width: 200px){
+  .navbar-dark .navbar-nav .nav-link, .dropdown-item {font-size: 1.8rem!important}
+  .navbar-dark .navbar-brand {font-size: 1.8rem!important}
+
+}
+
+@media (min-width: 510px){
+  .navbar-dark .navbar-nav .nav-link, .dropdown-item {font-size: 1.5rem!important}
+  .navbar-dark .navbar-brand {font-size: 1.6rem!important}
+
+
+}
+@media (min-width: 576px){
+  .navbar-dark .navbar-nav .nav-link, .dropdown-item{font-size: 1.5rem!important}
+  .navbar-dark .navbar-brand {font-size: 1.6rem!important}
+
+}
+@media (min-width: 729px){
+  .navbar-dark .navbar-nav .nav-link, .dropdown-item {font-size: 1.15rem!important}
+  .navbar-dark .navbar-brand {font-size: 1.3rem!important}
+
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: rgba(255, 225, 225, 0.9);
+}
+
+.navbar-dark .navbar-nav .nav-link.disabled {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+
+.navbar-dark .navbar-toggler {
+  color: rgba(255, 255, 255,0.1);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+.navbar-dark .navbar-brand {
+  color: rgba(255, 255, 255, 1)!important;
+}
+
+.footer{
+  background-color: #353535;
+  margin-bottom: 0px;
+  height: 100%;
+  padding-left: 6%;
+  padding-right: 6%;
+  padding-top: 1.6%;
+  padding-bottom: 1%;
+  color: #EEE;
+  text-align: center;
+  
+}
+
+
+.avatar-img{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  max-width: 68%;
+}
+
+@media (max-width: 576px){
+  .avatar-img{max-width: 90%;}
+}
+
