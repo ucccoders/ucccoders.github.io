@@ -356,12 +356,12 @@
 						<div class="card shadow">
 							<img class="card-img-top" src="Media/stemfellowship.jpg" alt="Card image cap">
 							<div class="card-body">
-								<h4 class="card-title">STEM Fellowship </h4>
+								<h4 class="card-title">Data Science & Machine Learning </h4>
 								<h5> Joshua Li and Leo Zhang</h5>
 								<hr class = "line1 line1-light">
-								<p class="card-text">The "STEM Fellowship Data Science" section of the Coding & Algorithms Academy focuses on the growing field of data science and big data analytics. In particular, we prepare for the High School Big Data Challenge hosted by SF, which prompts students to conduct analysis on public data sets and present their findings in academic papers. Our section also offers a means to engage in webinars, workshops and other opportunities offered by SF in the field of data science. </p>
+								<p class="card-text">The "Data Science and Machine Learning" section of the Coding & Algorithms Academy focuses on the growing fields of machine learning, data science, and big data analytics. We prepare for the High School Big Data Challenge hosted by STEM Fellowship, which prompts students to conduct analysis on public data sets and present their findings in academic papers. We also participate in machine learning hackathons and events, and encourage members to develop machine learning projects of their own! </p>
 							</div>
-							<div class = "card-footer" style = "text-align: center; background-color:white"><a href="stemfellowship.html" class="btn btn-primary">Section Resources</a></div>
+							<div class = "card-footer" style = "text-align: center; background-color:white"><a href="datascience.html" class="btn btn-primary">Section Resources</a></div>
 						</div> 
 					</div>
 				</div>
@@ -413,7 +413,7 @@
 							<div class="card-body">
 							<h5 class = "px-0 teamname">Joshua Li</h5>
 							<h6 class = "font-weight-light mb-1">Sr. Vice President</h6>
-							<h6 class = "font-weight-light">Algorithms, STEM Fellowship</h6>	
+							<h6 class = "font-weight-light">Algorithms, Data Science</h6>	
 							
 							</div>
 						</div>
@@ -474,8 +474,12 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
-	<div class = "footer">
-		<p style = "font-size: 1.1rem!important;">Designed and Coded by Kevin Y. Liu - &#9400; 2020</p> 
-	</div>
+	<div id="footer-placeholder">
+	</div> 
+	<script>
+		$(function(){
+		$("#footer-placeholder").load("/footer.html");
+		});
+	</script>
 </body>
 </html>
