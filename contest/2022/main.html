@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2022 Spring Coding Bowl</title>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+</head>
+<body>
+
+    <style>
+
+        .problem{
+            display: none;
+        }
+        textarea{
+            overflow: auto;
+            white-space: pre;
+            overflow-y:scroll;
+        }
+        .content{
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+    
+    </style>
+
+  
+    <div id="nav-placeholder">
+    </div>
+    <script>
+        $(function(){
+        $("#nav-placeholder").load("/navigation.html");
+        });
+    </script>
+
+	<div class = "content" style = "padding-top: 27px;">
+
+    
+
+        <div class = "block">            <h1 >2022 Spring Coding Bowl </h1>
+            <br>
+            <p>The Spring Coding Bowl was formerly known as the UCC Coding Competition. 
+            <hr class="line1">
+
+        
+            <h4>Details</h4>
+            <div id = "inst" >
+                <br>
+                <p> The Spring Coding Bowl is a 2-hour, 5-problem competition similar to the CCC. Contestants will be able to log in and start a personal 2-hour time window at any time in the contest period </p>
+                <p> Each problem is worth 10 marks, with approximate level of difficulty ranging from CCC Junior 2 to CCC Senior 4. </p>
+                <p> There is no limit as to how many solutions you can submit to the grader. The grader will score your submission and show you how many points you are awarded. If you submit multiple solutions to a problem, the highest scoring submission will be counted. This is a process similar to the CCC. However, please note that ties will be broken by the time of the last submission that increases a participant's score.</p>
+                <p> The contest is open to all high school students in participating schools. Like last year, an official honour roll will be published on this website, the top scorers will be named as "Coders of the Year", and top schools will also be recognized.</p>
+                <p> Please note that this year, the contest will be held on the DMOJ online judge to facilitate participation and scoring, so please review the instructions on this page carefully. <b><u>Participants will need to register prior to the contest.</u></b></p>
+
+            </div><br>
+            <h4> Before The Contest</h4><br>
+            <div>
+                <p><b>1. If you do not have a DMOJ account already, go to <a href="http://www.dmoj.ca" target="_blank">dmoj.ca</a> and create one.</b> DMOJ is the online grading platform that will be used for the contest (it is similar to the CCC grader). Note that the leaderboard of the competition will publically display the DMOJ usernames and scores of all participants, so please choose a username accordingly.</p>
+                <p><b>2. Register at <a href = "https://dmoj.ca/organization/172-ucc-coding-competition-2021" target = "_blank">this link</a> by <i><u>carefully following the instructions on the page</u></i> </b>after logging onto your DMOJ account. In particular, you will need to request membership and <u>fill in your first name, last name, grade, school name, and email address using the format detailed on that page.</u> </p>
+                <p><b>3. If you are unfamiliar with the DMOJ platform</b>, you should try solving a <a href = "https://dmoj.ca/problem/helloworld" target="_blank">"Hello, World!"</a> problem and/or <a target="_blank" href = "https://dmoj.ca/problems/?search=ucc+coding+competition">last year's Spring Coding Bowl problems</a>, and submitting your code for grading. The DMOJ grader will automatically test your code and give you a score. Please also familiarize yourself with DMOJ status codes (e.g. WA for Wrong Answer, TLE for Time Limit Exceeded)  <a href = "https://dmoj.ca/about/codes/" target = "_blank">here</a>, so you know what the grader's feedback means. </p>
+            </div><br>
+            <h4> During The Contest</h4><br>
+            <div>
+                <p><b>1. On contest day, log onto DMOJ and go to <a href = "https://dmoj.ca/contests" target = "_blank">this page</a></b>, where you should see the Spring Coding Bowl as a contest you can join. </p>
+                <p><b>2. Start the contest.</b> This will start a personal 2-hour window, so make sure you have 2 continuous hours to do the contest.  </p>
+                <p><b>3. Find and solve the problems.</b> Once you start the contest, you should be redirected to a page showing all five problems. As long as your 2-hour window hasn't expired, the "Problems" tab on the navigation bar will always take you back to this page. <br><br>Once you click into one of the five problems and have coded a solution, use the "Submit Solution" button and paste your code for the grader to grade. The grader will tell you how many points you obtained. If you don't obtain full marks, you are encouraged to adjust your code and try submitting again, or to work on another problem. If the grader gives you a status code such as WA or TLE, you can find out what it means <a href = "https://dmoj.ca/about/codes/" target = "_blank">here</a>. Please see the Details section above for more information about scoring. </p>
+
+
+            </div><br>
+            <h4> Rules</h4>
+            <div id = "rule">
+                <br>
+                <p>Do not communicate with other contestants or individuals regarding the contest before 12 hours after the end of contest period </p>
+                <p>Internet use is allowed to look up language and syntax on programming languages' official documentation only. Searching on sites like StackOverflow, GeeksForGeeks, or YouTube is not permitted.</p>
+                <p>Do not consult or use any previously written program by yourself or others. <b>Note that there are anti-plagiarism systems built into the contest-hosting platform.</b> </p>
+                <p>Do not use multiple accounts to participate in the contest. </p>
+                <p>Attempts to circumvent the contest system are strictly prohibited.</p>
+                <p style = "color: red"> Improper conduct will result in immediate disqualification and notification of your school's administration.</p>
+                
+            </div><br>
+            <h4>Tips</h4>
+            <div id = "tips">
+                <br>
+                <p>- To prepare, take a look at <a target="_blank" href = "https://dmoj.ca/problems/?search=ucc+coding+competition">last year's problems</a> and try coding them! </p>
+                <p>- Read each problem! While the problems are generally in order of difficulty this might not necessarily be the case. </p>
+                <p>- Take advantage of part marks! Subtasks worth partial marks will be detailed in the problem statements and the point value for each test case is clearly indicated. In many cases, focusing on getting partial marks (especially for the later problems) can be much easier than tackling the full problem. </p>
+                <p>- For clarifications about the rules or problem statements, contact kevin.liu@ucc.on.ca.</p>
+            </div>
+
+        
+            
+        </div>
+    </div>
+    
+    <div id="footer-placeholder">
+	</div> 
+	<script>
+		$(function(){
+		$("#footer-placeholder").load("/footer.html");
+		});
+	</script>
+
+	  
+    <script src="ucccc.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
